@@ -1,0 +1,44 @@
+﻿<div ng-controller="DefineDetailProductLabController">
+    <div class="DefineDetailProductLab">
+
+        <div class="divDefinePicture">
+            <img ng-src="{{ServerUrl + DefineDetailLab.PicUrl}}" class="ImgMainDefine" />
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="divProductName">
+            <span class="Lable">نام محصول :</span>
+            <span class="Value">Fiber Optic {{DefineDetailLab.ProductName_En}}</span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="divGeneratedCode">
+            <span class="Lable">مدل کالا :</span>
+            <span class="Value">{{DefineDetailLab.ProductIndexDescriptionText}}-{{DefineDetailLab.GeneratedCode}}</span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="divDescription">
+            <span class="Lable">مشخصات اصلی :</span>
+            <div class="clearfix"></div>
+            <span class="Value">Fiber Optic {{DefineDetailLab.ProductName_En}}{{GeneratedDescription}}, {{SelectedMeter}} Meter</span>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="divQR" style="display:none">
+            <img ng-src="{{CurrentUrlQRCode}}" class="QRCode" />
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="divButtons">
+            <span class="downloadCataloge" ng-click="downloadCataloge()">دانلود کاتالوگ محصول</span>
+            <img class="pdfImage" src="/images/PDF-Red.png" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="divNote">
+            <span class="context"> جهت هر گونه سوال یا اطلاعات بیشتر در این خصوص با شماره</span><span class="phone"> 43614130-021 </span><span class="context"> تماس حاصل فرمایید.</span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+

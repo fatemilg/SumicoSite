@@ -1,0 +1,51 @@
+﻿<head>
+    <title>
+        SignIn
+    </title>
+</head>
+<div ng-controller="SignInController" class="divSignIn">
+    <div class="SignInContainer">
+        <form id="FormSignIn" name="FormSignIn">
+            <div class="SignInSection">
+                <div>
+                    <span class="LoginTitle">Login</span>
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    <input name="SignInUserName" type="text" class="input-control Align-Left" placeholder="کد ملی" onfocus="this.placeholder = ''" onblur="this.placeholder = 'کد ملی'" maxlength="10" minlength="10" ng-model="signIn.UserName" ng-class="{'has-error' : FormSignIn.SignInUserName.$invalid && FormSignIn.SignInUserName.$dirty}" islet-iran-national-id required />
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    <input name="SignInPassword" type="password" class="input-control" placeholder="رمز عبور" onfocus="this.placeholder = ''" onblur="this.placeholder = 'رمز عبور'" maxlength="50" ng-model="signIn.Password" ng-class="{'has-error' : FormSignIn.SignInPassword.$invalid && FormSignIn.SignInPassword.$dirty}" required />
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    <input type="checkbox" class="RemmemberCheckBox" />
+                    <span class="RemmemberTitle">Remmember me</span>
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    <input type="button" value="Login" class="button-control" ng-disabled="FormSignIn.$invalid" ng-click="LoginUserSite(signIn)"/>
+                </div>
+                <div class="clearfix"></div>
+                <div class="Forgot">
+                    <a href="/#!/SignUp"><span>Forgot password? </span></a>
+                </div>
+                <div class="clearfix"></div>
+                <span style="float:right" ng-show="FormSignIn.SignInUserName.$invalid && FormSignIn.SignInUserName.$dirty" class="txtValidation Align-Right"> کد ملی را در فرمت صحیح وارد کنید!</span>
+                <span style="float:right" ng-show="FormSignIn.SignInPassword.$invalid && FormSignIn.SignInPassword.$dirty" class="txtValidation Align-Right"> رمز عبور را وارد کنید!</span>
+
+
+            </div>
+        </form>
+    </div>
+    <div class="SignUpContainer">
+        <div class="SignUpSection">
+            <span>Don't have an account? </span><a href="/#!/SignUp"><span class="SignUpLink">Sign up</span></a>
+            <!--<div class="clearfix"></div>
+            <span>ثبت نام کاربر </span><span class="SignUpLink">جدید</span>-->
+        </div>
+    </div>
+
+
+</div>

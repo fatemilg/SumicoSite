@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/apple-touch-icon-60x60.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76.png?v=9.2" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png?v=9.2" />
+    <link rel="icon" type="image/png" href="/images/favicon-196x196.png?v=9.2" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png?v=9.2" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=9.2" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=9.2" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/favicon-128x128.png?v=9.2" sizes="128x128" />
+
+
+    <meta name="theme-color" content="#334a9b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#334a9b" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 viewport-fit=cover" />
+    <!-- make fullscreen in shortcuts -->
+    <meta name="apple-mobile-web-app-title" content="onlyWebPro" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- CSS -->
+    <link href="/css/Mobile-bootstrap.min.css?v=9.2" rel="stylesheet" />
+    <link href="/css/bootstrap-theme.min.css?v=9.2" rel="stylesheet" />
+    <link href="/Fonts/font-awesome.css?v=9.2" rel="stylesheet" />
+    <link href="/css/owl.carousel.css?v=9.2" rel="stylesheet" />
+    <link href="/css/owl.transitions.css?v=9.2" rel="stylesheet" />
+    <link href="/css/owl.theme.css?v=9.2" rel="stylesheet" />
+    <link href="/css/MobileStyle.css?v=9.2" rel="stylesheet" />
+    <link href="/css/jquery-ui-1.10.1.custom.min.css?v=9.2" rel="stylesheet" />
+    <link href="/css/animate.css?v=9.2" rel="stylesheet" />
+    <link href="/css/ngProgress.css?v=9.2" rel="stylesheet" />
+    <link href="/css/bootstrap-toggle.min.css?v=9.2" rel="stylesheet" />
+    <link href="/css/CheckBoxCustome.css?v=9.2" rel="stylesheet" />
+    <link href="/css/SumicoStyle.css?v=9.2" rel="stylesheet" />
+
+    <!-- CSS -->
+    <!-- Public JS -->
+    <script src="/Scripts/jquery.min.js?v=9.2"></script>
+    <script src="/Scripts/jquery-ui.min.js?v=9.2"></script>
+    <script src="/Scripts/bootstrap.min.js?v=9.2"></script>
+    <script src="/Scripts/angular.min.js?v=9.2"></script>
+    <script src="/Scripts/angular-route.min.js?v=9.2"></script>
+    <script src="/Scripts/angular-sanitize.js?v=9.2"></script>
+    <script src="/Scripts/angular-cookies.min.js?v=9.2"></script>
+    <script src="/Scripts/ExtensionMethod.js?v=9.2"></script>
+    <script src="/Scripts/jquery.scrollTo.min.js?v=9.2"></script>
+    <script src="/Scripts/jquery.nicescroll.js?v=9.2"></script>
+    <script src="/Scripts/jquery.dcjqaccordion.2.7.js?v=9.2"></script>
+    <script src="/Scripts/angular-page-loader.min.js?v=9.2"></script>
+    <script src="/Scripts/owl.carousel.js?v=9.2"></script>
+    <script src="/Scripts/jQueryRotate.js?v=9.2"></script>
+    <script src="/Scripts/ngProgress.js?v=9.2"></script>
+    <script src="/Scripts/angular-iran-national-id.min.js?v=9.2"></script>
+    <script src="/Scripts/bootstrap-toggle.min.js?v=9.2"></script>
+    <script src="/Scripts/Alert.js?v=9.2"></script>
+    <script src="/Main/Routing.js?v=9.2"></script>
+
+    <!-- /Public JS -->
+    <!-- SERVICES JS -->
+    <script src="/Main/CommonServices/SupplierService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/ProductCategoryService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/DefineDetailProductService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/TechnicalPropertiesService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/AttachInterfaceCategoryService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/CatalogService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/SearchService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/AccessoryProductService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/RelatedDefineDetailProductService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/QuestionandAnswerService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/ContentCategoryTypeService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/ContentCategoryService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/ContentService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/CaptchaService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/CommentService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/QRService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/UserSiteService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/StateService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/MaterialListService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/MaterialListItemService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/MaterialListPreparationService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/DictionaryService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/QuestionCustomerService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/ContentModuleRetService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/SiteSettingService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/NewsLetterService.js?v=9.2"></script>
+
+
+
+    <script src="/Main/CommonServices/TreeRulePropertyService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/BannerService.js?v=9.2"></script>
+    <script src="/Main/CommonServices/DictionaryDescriptionService.js?v=9.2"></script>
+    <!-- /SERVICES JS -->
+    <!-- Factories JS -->
+    <script src="/Main/CommonFactories/DefineDetailFactory.js?v=9.2"></script>
+    <!-- /Factories JS -->
+    <!-- CONTROLLER JS -->
+    <script src="/Main/CommonController/IndexController.js?v=9.2"></script>
+    <script src="/Main/CommonController/ProductCategoryController.js?v=9.2"></script>
+    <script src="/Main/CommonController/SupplierController.js?v=9.2"></script>
+    <script src="/Main/CommonController/MasterProductController.js?v=9.2"></script>
+    <script src="/Main/CommonController/DefineDetailProductController.js?v=9.2"></script>
+    <script src="/Main/CommonController/DefaultController.js?v=9.2"></script>
+    <script src="/Main/CommonController/CatalogController.js?v=9.2"></script>
+    <script src="/Main/CommonController/SearchController.js?v=9.2"></script>
+    <script src="/Main/CommonController/ArticleController.js?v=9.2"></script>
+    <script src="/Main/CommonController/ArticleCategoryController.js?v=9.2"></script>
+    <script src="/Main/CommonController/LoginController.js?v=9.2"></script>
+    <script src="/Main/CommonController/SignInController.js?v=9.2"></script>
+    <script src="/Main/CommonController/SignUpController.js?v=9.2"></script>
+    <script src="/Main/CommonController/CompareController.js?v=9.2"></script>
+    <script src="/Main/CommonController/CompareDetailController.js?v=9.2"></script>
+    <script src="/Main/CommonController/SideUserMenuController.js?v=9.2"></script>
+    <script src="/Main/CommonController/MaterialListItemController.js?v=9.2"></script>
+    <script src="/Main/CommonController/MaterialListController.js?v=9.2"></script>
+    <script src="/Main/CommonController/ContactUsController.js?v=9.2"></script>
+    <script src="/Main/CommonController/FooterController.js?v=9.2"></script>
+
+    <script src="/Main/CommonController/LabProductController.js?v=9.2"></script>
+    <script src="/Main/CommonController/GuaranteeController.js?v=9.2"></script>
+    <script src="/Main/CommonController/DefaultController.js?v=9.2"></script>
+    <script src="/Main/CommonController/UnderConstructionController.js?v=9.2"></script>
+    <script src="/Main/CommonController/AboutUsController.js?v=9.2"></script>
+    <script src="/Main/CommonController/DictionaryDescriptionController.js?v=9.2"></script>
+    <script src="/Main/CommonController/DefineDetailProductLabController.js?v=9.2"></script>
+
+
+    <!-- /CONTROLLER JS -->
+    <!-- Directives JS -->
+    <script src="/Main/CommonDirectives/OwlCarouselDirective.js?v=9.2"></script>
+    <script src="/Main/CommonDirectives/TooltipDirective.js?v=9.2"></script>
+    <script src="/Main/CommonDirectives/DescriptionPatternDirective.js?v=9.2"></script>
+    <script src="/Main/CommonDirectives/OnlyNumberDirective.js?v=9.2"></script>
+    <script src="/Main/CommonDirectives/ConfirmDirective.js?v=9.2"></script>
+
+    <script src="/Main/CommonDirectives/TableDirective.js?v=9.2"></script>
+    <script src="/Main/CommonDirectives/DynamicSlideTogglingDriective.js?v=9.2"></script>
+
+    <!-- Directives JS -->
+    <!--<script src="/dist/up.js?v=9.2"></script>
+    <script src="/dist/down-min.js?v=9.2"></script>-->
+</head>
+<body ng-app="myApp" ng-cloak>
+    <page-loader latency="500"></page-loader>
+    <div class="alert_placeholders"></div>
+
+    <!-- Side Menu -->
+    <div class="SideMenu" ng-controller="IndexController">
+
+        <!-- Compare Icon Mobile Size -->
+        <!--<a class="CatalogMenuButton ComapreHeaderIconMobile" href="/#!/Compare">
+            <img src="/images/SumicoCompareIcon.png" title="Compare" class="CursorPointer btnMenu imgCompareTopButton" />
+            <h1 class="ComareCount" ng-show="CompareList">{{CompareList.length}}</h1>
+            <div id="CompareImageDefineMovableMobile"></div>
+        </a>-->
+
+        <div style="display: none"><img src="/images/SumicoRightMenuIcon.png" /></div>
+
+        <a href="#!/Default" class="LogoInHeader SumicoLogoMobileSize" onclick="ClickDarkBody()">
+            <img src="/images/SUMICO Logo- BLACK.png" id="OpenCatalogMenu" class="CursorPointer" />
+        </a>
+
+
+        <!--<div class="modal fade" id="ModalChekToken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:300px;">
+                <div class="modal-content">
+                    <div class="modal-body row modal-content">
+                        <p class="LoginTitleInChekToken">لطفا ابتدا به حساب کاربری خود وارد شوید، در غیر این صورت ثبت نام کنید.</p>
+                        <div class="clearfix"></div>
+                        <div class="SignInLinkInChekToken" ng-click="GotoLinkInChekToken('/#!/SignIn')">ورود</div>
+                        <div class="SignUpLinkInChekToken" ng-click="GotoLinkInChekToken('/#!/SignUp')">ثبت نام</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="modal fade" id="ModalMaterialListCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body row modal-content">
+                        <form id="FormMaterialList" name="FormMaterialList" novalidate>
+                            <i class="fa fa-save SaveNewMaterialList" title="افزودن لیست" ng-click="AddNewMaterialList(FormMaterialList,NewMaterialList)"></i>
+                            <input type="text" name="Title" class="form-control txtNewMaterialList" ng-model="NewMaterialList.Title" placeholder="عنوان لیست جدید" descriptionpattern required autocomplete="off" />
+                            <span style="float:right" ng-show="(FormMaterialList.Title.$dirty || submittedRootList) && FormMaterialList.Title.$error.required" class="txtValidation Align-Right"> عنوان را وارد کنید!</span>
+                        </form>
+                        <div class="clearfix"></div><br />
+                        <p class="SelectMaterialListTitle">لیست مورد نظر را انتخاب کنید:</p>
+                        <div class="ModalMaterilaListContainer">
+                            <ul class="ulMaterialListInModal">
+                                <li ng-repeat="MaterialList in MaterialLists" class="liInUlMaterialListInModal">
+                                    <div class="NewListButton" ng-click="NewSubMaterialList($event)" ng-if="!MaterialList.Items"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="RootListInMaterialListInModalContainer">
+                                        <div ng-click="!MaterialList.SubList ? AddNewMaterialListItem(MaterialList) : ''" class="RootListInMaterialListInModal">
+                                            <i ng-class="MaterialList.SubList ? 'fa fa-folder-open' : 'fa fa-folder'"></i> {{MaterialList.Title}}
+                                            <span class="badge badge-primary badge-pill">{{MaterialList.CountItem}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="NewSubMaterialListContainer">
+                                        <form id="FormSubMaterialList" name="FormSubMaterialList" novalidate>
+                                            <input type="text" name="NewSubMaterialList" ng-model="SubMaterialList.Title" class="form-control NewSubMaterialList" placeholder="عنوان زیر دسته را وارد کنید" required />
+                                            <i class="fa fa-save SaveNewSubMaterialListInModal" title="ذخیره" ng-click="AddNewMaterialList(FormSubMaterialList,SubMaterialList,MaterialList.IDMaterialList)"></i>
+                                        </form>
+                                    </div>
+                                    <div ng-repeat="SubList in MaterialList.SubList" class="SubListInMaterialListInModal">
+                                        <div class="SubListLineInMaterialListInModal"></div>
+                                        <div class="SubListDetailInMaterialListInModal" ng-click="AddNewMaterialListItem(SubList)">
+                                            <i class="fa fa-folder"></i>
+                                            {{SubList.Title}}
+                                            <span class="badge badge-primary badge-pill">{{SubList.CountItem}}</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!--<a class="CatalogMenuButton" onclick="ToggleSideUserMenu()" id="UserMenuButton" ng-if="Login" ng-click="OpenSideMenu()">
+            <img src="/images/eq.png" class="CursorPointer btnMenu EqIcon" id="UserMenuIcon" />
+        </a>-->
+
+        <div ng-controller="SearchController" class="SearchControllerInMaster">
+            <div class="Bakward">
+                <img src="/images/backward.png" onclick="CloseSearchMenu()" ng-click="ClearTextSearch()" />
+            </div>
+            <div class="SearchTextBox">
+                <!--<i class="fa fa-search" style="display: inline-block;"></i>-->
+                <img class="SearchTextBox-Icon" src="../../images/SumicoSearchIcon.png" />
+                <input type="text" title="Search" id="txtIndexSearch" class="txtSearch CursorPointer" onclick="OpenSearchMenu()" ng-change="Search(SearchText)" autocomplete="off" ng-model="SearchText" ng-model-options="{debounce:500}" />
+                <span class="Color-Withe ClearTextSearch" ng-click="ClearTextSearch()">×</span>
+                <img class="imgLoaderSearch" src="/images/loader1.gif" />
+                <div class="SearchBox">
+                    <div class="Index-SearchContainer">
+                        <div class="DefaultSearchBoxContainer">
+                            <!--------Product---------->
+                            <div class="CategorySearch" id="CategorySearch">
+                                <div ng-repeat="RuleDefine in Searches.RuleDefine">
+                                    <a href="/#!/DefineDetailProduct/{{RuleDefine.IDX}}" ng-click="HideMenuBox()">
+                                        <img ng-src="{{ServerUrl + RuleDefine.PicUrl}}" class="SearchPic" />
+                                        <div class="SearchDescription">
+                                            <h6 style="display: inline-block;letter-spacing: 0.5px;">{{RuleDefine.PartNumber}}</h6>
+                                            <div class="clearfix"></div>
+                                            <h6 class="Color-Withe IndexDescriptionTextInSearch">{{RuleDefine.IndexDescriptionText}}</h6>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                    <hr style="margin: 5px 5px 5px 0; border-color: #666" />
+                                </div>
+                            </div>
+                            <div class="CloseBtn" onclick="CloseSearchMenu()" ng-click="ClearTextSearch()">
+                                <div class="CloseSearchBox">
+                                    <div class="times">&times;</div>
+                                    <span class="CloseSearchBoxText">Close</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a>
+            <img src="/images/Catalog.png"  class="CursorPointer btnCatalogMenu" onclick="OpenCatalogMenu()" />
+        </a>
+        <!--<a class="CatalogMenuButton ComapreHeaderIconDesktop" href="/#!/Compare">
+            <img src="/images/SumicoCompareIcon.png" title="Compare" class="CursorPointer btnMenu imgCompareTopButton" />
+            <h1 class="ComareCount" ng-show="CompareList">{{CompareList.length}}</h1>
+            <div id="CompareImageDefineMovable"></div>
+        </a>-->
+
+        <a class="CatalogMenuButton HeaderSumicoUserIcon" id="SignInIcon" href="/#!/SignIn" ng-if="!Login">
+            <img src="/images/SumicoUserIcon.png" title="Login" class="CursorPointer btnMenu" />
+        </a>
+
+        <div style="display: none"><img src="../../images/SumicoLeftMenuIcon.png" /></div>
+
+    </div>
+    
+    <!-- -->
+    <div id="MovableContainer">
+        <div class="SideUserMenu" ng-controller="SideUserMenuController">
+            <div class="SideUserMenuContainer">
+                <div class="RightSideMenu">
+                    <div class="UserInfo">
+                        <img src="/images/user.png" class="UserProfileImage" />
+                        <h5 class="UserProfileFullName">
+                            {{Login[0].fullName}}
+                        </h5>
+                        <h5 class="UserProfileNationalCode">
+                            {{Login[0].NationalCode}}
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="MenuList">
+                        <div class="MenuListItem" id="MaterialListMenu" ng-click="SelectSideMenu('/Main/MaterialList/MaterialList.html',undefined,'MaterialListMenu')">
+                            لیست تجهیزات
+                            <i class="fa fa-angle-left LeftArrow"></i>
+                        </div>
+                        <div class="MenuListItem" ng-click="SelectSideMenu('')">
+                            ویرایش اطلاعات
+                            <i class="fa fa-angle-left LeftArrow"></i>
+                        </div>
+                        <div class="MenuListItemLogOut" ng-click="LogOut()">
+                            خروج <i class="fa fa-sign-out" title="خروج"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="SideMenuViewContainer">
+                    <img src="/images/backward.png" onclick="CloseSearchMenu()" ng-click="BackUserSideMenu()" class="BackUserSideMeu" />
+                    <div ng-include="SelectedSideMenuItem"></div>
+                </div>
+            </div>
+        </div>
+        <div class="MainSection">
+            <div id="DarkBody">
+            </div>
+            <div class="SideContentBox">
+            </div>
+            <div class="ViewContainer">
+                <div class="page {{ViewClassName}}" ng-view></div>
+            </div>
+
+            <div ng-include="'/Main/CommonTemplates/SumicoProductMenu.html?v=9.2'" style="z-index:39999;position:fixed">
+
+            </div>
+            <div class="ContactMenu" ng-include="'/Main/CommonTemplates/SumicoContactUs.html?v=9.2'" style="z-index:39999;position:fixed">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- -->
+    <div id="CatalogeMenuContainer" ng-controller="CatalogController">
+        <div id="CloseCatalogMenu" class="CursorPointer" onclick="CloseCatalogMenu()">&times;</div>
+
+        <h3 style="text-align: left; color: #610040;">Catalogs</h3>
+        <div class="LineOut">
+            <div class="LineIN" style="border: none; border-top: 1px;"></div>
+        </div>
+        <div id="CatalogList">
+            <div ng-repeat="Supplier in Suppliers">
+                <h4 class="CatalogHeader"> {{Supplier.Name_En}}</h4><br />
+                <div style="width: 110px; display: inline-block; margin: 3px 8px 7px 3px" ng-repeat="Catalog in Catalogs" data-ng-if="Catalog.IDRet == Supplier.IDUser">
+                    <a href="{{ServerUrl +Catalog.PDFUrl}}">
+                        <img ng-src="{{ServerUrl + Catalog.PicUrl}}" style="width: 100%; margin: 0px" />
+                    </a>
+                    <b style="font-size: 11px; float: left; color: #610040;">{{Catalog.Name_En}}</b>
+                    <div class="clearfix"></div>
+                    <span style="font-size: 10px; float: left;color:black">File size: {{Catalog.SizeOfPDF}}MB </span>
+                    <img style="float: right; width: 20px; margin: 0; cursor: pointer" src="/images/CopyToClipboarad.png" data-toggle="tooltip" title="Copy to clipboard" ng-click="CopyToClipboard(Catalog.IDCatalog)" />
+                    <p id="LinkOfCatalogIDCatalog{{Catalog.IDCatalog}}" style="display: none">http://scmcenter.ir/{{Catalog.PDFUrl}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rotate In Mobile -->
+    <div class="RotateInMobile">
+        <img src="/images/RotatePhone.png" class="RotateImage" />
+        <div class="clearfix"></div>
+        لطفا گوشی خودر را به حالت عمودی برگردانید
+    </div>
+
+    <!-- Footer -->
+    <div class="FooterMenu" ng-controller="FooterController">
+
+        <!-- Footer Menu -->
+        <div>
+            <div class="FooteMenuItem ">
+                <a onclick="ToggleContactMenu(this)">
+                    <img class="ContactMenuIconIMG FooterMenuIcon ContactIcon" src="/images/SumicoContactIcon.png" />
+                </a>
+            </div>
+            <div class="FooteMenuItem LeftBorder">
+                <a href="/#!/Guarantee" onclick="ClickDarkBody()">
+                    <img class="FooterMenuIcon TrainingIcon" src="/images/SumicoServiceCenterIcon.png" />
+                </a>
+            </div>
+            <div class="FooteMenuItem LeftBorder">
+                <a href="/#!/UnderConstruction" onclick="ClickDarkBody()">
+                    <img class="FooterMenuIcon RahkarhaIcon" src="/images/SumicoRahkarhaIcon.png" />
+                </a>
+            </div>
+            <div class=" FooteMenuItem ProductMenuIcon LeftBorder">
+                <a onclick="ToggleProductMenu(this)">
+                    <img class="ProductMenuIconIMG FooterMenuIcon ProductIcon" src="/images/SumicoProductsIcon.png" />
+                </a>
+            </div>
+            <div class=" FooteMenuItem ProductMenuIcon LeftBorder">
+                <a href="/#!/UnderConstruction" onclick="ClickDarkBody()">
+                    <img class="FooterMenuIcon NewsIcon" src="/images/SumicoNewsIcon.png" />
+                </a>
+            </div>
+            <div class=" FooteMenuItem LeftBorder">
+                <a href="/#!/ArticleCategory" onclick="ClickDarkBody()">
+                    <img class="FooterMenuIcon ArticlesIcon" src="/images/SumicoArticleIcon.png" />
+                </a>
+            </div>
+            <div class="FooteMenuItem LeftBorder">
+                <a href="/#!/AboutUs" onclick="ClickDarkBody()">
+                    <img class="MaterialMenuIcon FooterMenuIcon MaterialIcon" src="/images/SumicoAboutUsIcon.png" />
+                </a>
+            </div>
+        </div>
+
+        <!-- CopoyRight -->
+        <div class="Footer-CopyRight">.تمامی حقوق مادی و معنوی این سایت متعلق به شرکت دانش بنیان <b>ترویج صنعت سومی پارسیان</b> می باشد</div>
+    </div>
+
+
+
+    <script src="/dist/Script.js?v=9.2"></script>
+
+</body>
+</html>

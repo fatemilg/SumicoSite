@@ -1,0 +1,1568 @@
+﻿.MainSection {
+    background-color: #fff;
+    /*background-image: linear-gradient(#fff,#E2E2E2);*/
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #334a9b;
+    opacity: 0.6; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #334a9b;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #334a9b;
+}
+
+input[type="button"] {
+    color: #334a9b;
+}
+
+/* DESKTOP SIZE
+============================================================================= */
+@media only screen and (min-width : 768px) {
+
+    .btnCatalogMenu {
+        height: 35px !important;
+        width: 80px !important;
+        margin-top: 5px !important;
+        border-radius: 5px;
+    }
+
+    a, h1, h2, h3, h4, h5, h6, span, p, li {
+        color: #334a9b !important;
+    }
+
+    .LogoInHeader img {
+        width: auto !important;
+        height: 40px !important;
+    }
+
+    .SideMenu {
+        background-color: #fff;
+    }
+
+    .FooterMenu {
+        background-color: #334a9b;
+    }
+
+    .UnderSpotPartNumber {
+        color: #334a9b;
+    }
+
+    .UnderSpotPartIndex {
+        color: #334a9b;
+    }
+
+
+
+    .ProductCategoryHeader {
+        background: none;
+    }
+
+    .BasePropertyOfProduct {
+        background-color: #334a9b
+    }
+
+    .TextDescription .Description {
+        color: #334a9b;
+        font-weight: bold;
+    }
+
+    .TextDescription .CountryOrigin {
+        color: #334a9b;
+        font-weight: bold;
+    }
+
+    .TextDescription .Summary {
+        color: #334a9b;
+        font-weight: bold;
+    }
+
+    .FileTypeImage {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+
+
+    .SelectPartNumber {
+        color: #334a9b;
+    }
+
+    .CompareSupplierName {
+        color: #334a9b;
+    }
+
+    .ProductCategoryTree > li .imgMasterproduct {
+        border: solid 1px #334a9b !important;
+    }
+
+    #StickyProductCategoryHeader {
+        background-color: transparent;
+        text-align: center;
+    }
+
+    div.StickyProductCategoryHeader {
+        background-color: #fff !important;
+    }
+
+    #TopProductCategory {
+        /*background-color: #fff;*/
+        display: inline-block !important;
+        margin-left: 0 !important;
+    }
+
+    .imgProductCategoryHeader {
+        border-radius: 50%;
+    }
+
+    .Color-Withe {
+        color: #334a9b !important;
+    }
+
+    #MasterProduct img {
+        border: 1px solid #334a9b;
+    }
+
+    .HeaderTable tr td {
+        color: #334a9b !important;
+    }
+
+    .TitpePropertyInCompare {
+        color: #334a9b !important;
+        font-weight: bold;
+    }
+
+    .CompareTable tr td p {
+        color: #000 !important;
+    }
+
+    .CompareTable tr td {
+        color: #000;
+        padding: 10px 5px !important;
+    }
+
+    .CompareTable tr:hover {
+        color: #fff !important;
+        background-color: #d4d4d4;
+    }
+
+    .CompareItemButtonContainer {
+        color: #334a9b;
+    }
+
+    .CompareButton, .AddToListButton {
+        border: none !important;
+    }
+
+    .PopoverProductMenu > .Item {
+        padding: 5px;
+    }
+
+        .PopoverProductMenu > .Item img {
+            height: 40px;
+        }
+
+    .StickyDefineHeader {
+        background-color: #d4d4d4;
+    }
+
+    /*.CompareTable col:nth-child(odd) {
+        background-color: transparent;
+    }
+
+    .CompareTable col:nth-child(even) {
+        background: #E2E2E2;
+    }*/
+
+    .CompareTable:hover {
+        background-color: #e9e9e9 !important;
+    }
+
+    .ProductCategoryTree .fa {
+        color: #334a9b !important;
+    }
+
+    /*.CatalogMenuButton img {
+        border: solid 1px #334a9b;
+    }*/
+
+    .imgCompareTopButton {
+        padding: 5px !important;
+    }
+
+    .badge {
+        color: #fff !important;
+    }
+
+    .DefineDetailPartNumber {
+        background-color: rgb(93,93,93);
+    }
+
+    #OpenCatalogMenu {
+        border: solid 1px #334a9b !important;
+    }
+
+    .SearchPartNumberInCompare {
+        background: none;
+        color: #000;
+    }
+
+    .DefineDetailProductsInMasterPageRole img {
+        border: 1px solid #334a9b;
+    }
+
+    #OtherImages img {
+        border: 1px solid #334a9b;
+    }
+
+    .MasterImage {
+        border: 1px solid #334a9b;
+    }
+
+    .DefineItemInRelated img {
+        border: 1px solid #334a9b;
+    }
+
+    .Address-Fa {
+        color: #fff !important;
+    }
+
+    .Address-En {
+        color: #fff !important;
+    }
+
+    .AboutHeaderTitle {
+        color: #fff !important;
+    }
+
+    .AboutInContact .AboutItem {
+        color: #fff !important;
+    }
+
+    .MobileContactMenu .AboutTab {
+        font-size: 11px;
+        direction: rtl;
+    }
+
+    .AboutInContact .AboutItem {
+        background-color: #334a9b;
+    }
+
+    #CatalogList {
+        height: 650px;
+        overflow-y: scroll;
+    }
+
+    .CatalogHeader {
+        background-color: #334a9b;
+    }
+
+    .FooterMenuTel {
+        background-color: #334a9b;
+    }
+
+    .SearchDescription h6 {
+        color: #fff !important;
+    }
+
+    .ClearTextSearch {
+        background: none;
+        margin-top:8px;
+
+    }
+
+    .IndexBanner {
+        /*height: 340px !important;*/
+    }
+
+    .divSignUp .input-control {
+        color: #334a9b;
+    }
+
+    .divSignIn .input-control {
+        color: #334a9b;
+    }
+
+    .divSignUp .NewUser lable {
+        color: #000;
+    }
+
+    .MasterIcon img {
+        width: 55px;
+        float: right;
+        height: unset !important;
+        border-radius: unset !important;
+    }
+
+    .SideUserMenu {
+        background-color: #fff;
+    }
+
+    .SubMaterialList .divCounterSubs {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .LogoInHeader #OpenCatalogMenu {
+        border: none !important;
+    }
+
+    .DefineDescriptionFa {
+        color: #334a9b;
+        line-height: 25px;
+    }
+
+    .GeneratePartNumber-numbers {
+        color: #334a9b;
+    }
+
+    .GeneratePartNumber-searchlist-items {
+        color: #334a9b;
+    }
+
+    /* Header - Desktop Size */
+    /* --------------------- */
+    .CursorText {
+        cursor: text;
+    }
+
+    .Bakward {
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+
+    .ComapreHeaderIconMobile { /* temp */
+        display: none !important;
+    }
+
+    .HeaderSumicoUserIcon {
+        display: none !important;
+    }
+
+    .SearchTextBox {
+        direction: ltr;
+        float: left;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        margin: 0px 10px 0px 5px;
+        margin-top: 5px
+    }
+
+    .SearchTextBox .fa-search {
+        color: #334a9b;
+    }
+
+    .SearchTextBox-Icon {
+        width: 35px !important;
+        height: 35px !important;
+        display: inline-block;
+        position: absolute;
+        z-index: -1
+    }
+
+    .txtSearch {
+        color: #000;
+        height: 30px;
+        padding-left: 30px;
+        width: 88%;
+    }
+
+    .SideMenu {
+        border-bottom: 1px solid #bbb !important;
+        display: flex;
+        flex-flow: row wrap;
+        direction: rtl;
+        padding: 10px 15px;
+    }
+
+    .CatalogMenuButton {
+        margin-right: 0px;
+ 
+    }
+    
+    .CatalogMenuButton img {
+        border: none;
+    }
+
+    .SideMenu img {
+        width: 45px;
+        height: auto;
+    }
+
+    .LogoInHeader {
+        margin-left: 0px;
+    }
+
+    .SearchControllerInMaster {
+        margin-right: auto;
+    }
+
+    /* Footer Mneu - Desktop Size */
+    /* -------------------------- */
+    .FooterMenu {
+        padding: 0px;
+        text-align: center;
+        bottom: 0px;
+        height: 70px;
+        z-index: 40000;
+    }
+
+    .ContactMenu {
+        bottom: 70px;
+    }
+
+    .PopoverProductMenu {
+        bottom: 70px;
+    }
+
+    .FooterMenuIcon {
+        width: 45px !important;
+        height: 45px;
+    }
+
+    .FooteMenuItem {
+        /*margin: 1px 5px !important;*/
+        text-align: center;
+        width: 11%;
+        margin: 1px 0px !important;
+    }
+
+    /* Copyright */
+    /* --------- */
+    .Footer-CopyRight {
+        color: #334a9b;
+        font-size: 12px;
+        background-color: #fff;
+        padding: 5px 0px
+    }
+
+    /* Sumico Custom BreadCrumb */
+    /* ------------------------ */
+    .category-samelevelcategories-a {
+        border-color: #337ab7;
+    }
+
+    .category-samelevelcategories {
+        background-color: white;
+    }
+
+    .breadcrumb li + li:before {
+        color: #337ab7;
+    }
+
+    /* Sumico Custom Under Construction Page - Desktop Size */
+    /* ---------------------------------------------------- */
+    .underconstruct-wrapper {
+        color: #334a9b;
+    }
+
+    /* Sumico Default Page - Desktop Size */
+    /* ---------------------------------- */
+    /* Banner Slider */
+    /* ------------- */
+    #DefaultPage-MainSlider {
+        border: 1px solid #bbb;
+    }
+    
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-buttons div {
+        color: #334a9b;
+        font-size: 50px;
+    }
+
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-page span {
+        background-color: #334a9b;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        margin: 0px;
+    }
+
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-page {
+        border: 1px solid #334a9b;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        margin: 5px 3px;
+    }
+
+    #DefaultPage-MainSlider .defaultpage-maincarousel .owl-pagination {
+        margin-top: -15px;
+    }
+
+    /* Brands */
+    /* ------ */
+    .DefaultPage-Brands {
+        padding: 20px 0px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #bbb;
+    }
+
+    .DefaultPage-Brand {
+        display: inline-block;
+        text-align: center;
+        width: 22%;
+        border-left: 1px solid #bbb;
+    }
+
+    .DefaultPage-Brand img {
+        width: 82%;
+    }
+
+    .DefaultPage-Brand:first-child {
+        border-left: none;
+    }
+
+    /* Slider Brands */
+    /* ------------- */
+    .DefaultPage-SliderBrands {
+        display: none;
+    }
+
+    /* Product slider title */
+    /* -------------------- */
+    .DefaultPage-PorductSliderTitle {
+        color: #888;
+        font-family: 'IRANSans_Bold';
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* Product slider */
+    /* -------------- */
+    #UnderSpotDefineDetailProduct .owl-wrapper-outer .owl-wrapper .owl-item .item a img {
+        border-radius: 20px;
+        border: 1px solid #888;
+    }
+
+    .DefaultCarouselContainer {
+        padding: 0px 220px;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next,
+    #UnderSpotDefineDetailProduct .owl-prev {
+        color: #334a9b !important;
+        font-size: 70px !important;
+        top: -190px;
+        opacity: 0.5 !important;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next:hover,
+    #UnderSpotDefineDetailProduct .owl-prev:hover {
+        opacity: 1 !important;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-item.center > div:after {
+        content: 'center';
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next {
+        right: -70px;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-prev {
+        left: -70px;
+    }
+
+    .DefaultPage-ProductSlider-Item {
+        margin: 5px 15px;
+    }
+
+    .DefaultPage-DefineItemImage {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .DefaultPage-ProductSlider-Decs {
+        width: 70%;
+        float: left;
+    }
+
+    .UnderSpotPartIndex {
+        margin-top: 5px;
+    }
+
+    .DefaultPage-ProductSlider-Buttons {
+        width: 30%;
+        float: left;
+
+    }
+    .DefaultPage-ProductSlider-CompareButton {
+        float: right;
+    }
+
+    /* SocialMedia Contacts */
+    /* -------------------- */
+    .DefaultPage-SocialMediaWrapper {
+        display: none;
+    }
+
+    /* Sumico CompareDetails Table - Tablet & Desktop Size */
+    /* --------------------------------------------------- */
+    .grid-comparetable {
+        color: #334a9b;
+    }
+
+    .TitpePropertyInCompare-BackColorOdd {
+        background-color: #e2e2e2;
+    }
+
+    /* --- */
+    .AddToListButton {
+        display: none;
+    }
+
+    .AllDescriptions .DefineButtons .btnDefine:nth-child(2) {
+        display: none;
+    }
+
+    .btnInCompareHeader {
+        display: none !important;
+    }
+
+    /* ArticleCategory Page - Desktop Size */
+    /* ----------------------------------- */
+    .RightSideArticleList .RightSideArticleHeader {
+        background-color: #334a9b;
+        color: #fff;
+    }
+
+    .RightSideArticleContainer-ContentOuter-title {
+        text-align: center;
+    }
+
+    .TitleTopArticleContent span {
+        color: #636569 !important;
+    }
+
+    .AbstractArticle {
+        color: #636569 !important;
+    }
+
+    .RightSideArticleContainer-ArticleTitle {
+        text-align: justify;
+    }
+
+    .TopArticleContent {
+        background-color: #eeeeee;
+        border: 1px solid #d3d3d3;
+    }
+
+    .LeftSideArticleList {
+        width: 20%;
+    }
+
+    .LeftSideArticleList-BodyWrapper {
+        padding: 30px 35px 0px 35px;
+    }
+
+    .LeftSideArticleList-HeaderWrapper {
+        padding: 0px 35px;
+    }
+
+    .LeftSideArticleList-Header-LinkEnActive, .LeftSideArticleList-Header-LinkFaActive {
+        color: #636569 !important;
+    }
+
+    .MiddleContainer {
+        width: 54%;
+    }
+
+    .RightSideArticleList {
+        width: 26%;
+    }
+
+    .LiKeDisLike {
+        width: 21%;
+    }
+
+    /* Article Page - Desktop Size */
+    /* --------------------------- */
+    .ArticleDescription_Fa p {
+        color: #636569 !important;
+    }
+
+    /* TABLET SIZE 
+    ========================================================================= */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+        /* Sumico Custom Under Construction Page - Desktop Size */
+        /* ---------------------------------------------------- */
+
+        /* Banner slider */
+        /* ------------- */
+        .IndexBanner {
+            height: 100%;
+        }
+
+        .defaultpage-maincarousel .owl-next,
+        .defaultpage-maincarousel .owl-prev {
+            top: -120px;
+        }
+
+        .DefaultPage-Brand {
+            padding: 0px 10px;
+        }
+
+        .DefaultPage-Brand img {
+            width: 100%;
+        }
+
+
+        /* Product slider */
+        /* -------------- */
+        .DefaultCarouselContainer {
+            padding: 0px 120px;
+        }
+
+        #UnderSpotDefineDetailProduct .owl-next,
+        #UnderSpotDefineDetailProduct .owl-prev {
+            top: -130px;
+            font-size: 60px !important;
+        }
+
+        #UnderSpotDefineDetailProduct .owl-next {
+            right: -50px;
+        }
+
+        #UnderSpotDefineDetailProduct .owl-prev {
+            left: -50px;
+        }
+    }
+
+}
+
+
+
+
+
+
+/* MOBILE SIZE
+============================================================================= */
+@media screen and (max-width:415px) {
+
+    .btnCatalogMenu {
+        height: 35px !important;
+        width: 80px !important;
+        margin-top: 5px !important;
+        border-radius: 5px;
+    }
+
+    a, h1, h2, h3, h4, h5, h6, span, p, li {
+        color: #334a9b !important;
+    }
+
+    .LogoInHeader #OpenCatalogMenu {
+        border: none !important;
+        /*height: 23px !important;*/
+    }
+
+    .MasterIcon img {
+        width: 55px;
+        float: right;
+        height: unset !important;
+        border-radius: unset !important;
+    }
+
+    .divSignUp .input-control {
+        color: #334a9b;
+    }
+
+    .divSignIn .input-control {
+        color: #334a9b;
+    }
+
+    .divSignUp .NewUser lable {
+        color: #000;
+    }
+
+    .PopoverProductMenu {
+        padding-top: 0;
+    }
+
+    .divSignUp .NewUser lable {
+        color: #000;
+    }
+
+    .divSignIn .input-control {
+        color: #334a9b;
+    }
+
+    .divSignUp .input-control {
+        color: #334a9b;
+    }
+
+    .ClearTextSearch {
+        background: none;
+    }
+
+    .SearchDescription h6 {
+        color: #fff !important;
+    }
+
+    .FooterMenuTel {
+        background-color: #334a9b;
+    }
+
+    .CatalogHeader {
+        background-color: #334a9b;
+    }
+
+    .AboutInContact .AboutItem {
+        background-color: #334a9b;
+    }
+
+
+    .AboutInContact .AboutItem {
+        color: #fff !important;
+    }
+
+    .AboutHeaderTitle {
+        color: #fff !important;
+    }
+
+    .Address-En {
+        color: #fff !important;
+    }
+
+    .Address-Fa {
+        color: #fff !important;
+    }
+
+
+
+    .DefineItemInRelated img {
+        border: 1px solid #334a9b;
+    }
+
+    #OtherImages img {
+        border: 1px solid #334a9b !important;
+    }
+
+    .MasterImage {
+        border: 1px solid #334a9b;
+    }
+
+    .SearchPartNumberInCompare {
+        background: none;
+        color: #000;
+    }
+
+    .DefineDetailPartNumber {
+        background-color: rgb(93,93,93);
+    }
+
+    #OpenCatalogMenu {
+        /*height: 29px;*/
+        border: solid 1px #334a9b !important;
+    }
+
+    .badge {
+        color: #fff !important;
+    }
+
+    .imgCompareTopButton {
+        padding: 5px !important;
+    }
+
+    a, h1, h2, h3, h4, h5, h6, span, p {
+        color: #334a9b !important;
+    }
+
+    .LogoInHeader img {
+        width: auto !important;
+        margin-top: -5px;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+    .SideMenu {
+        background-color: #fff;
+        border-bottom: 1px solid #334a9b !important;
+    }
+
+    .FooterMenu {
+        background-color: #334a9b;
+    }
+
+    .UnderSpotPartNumber {
+        color: #334a9b;
+    }
+
+    .UnderSpotPartIndex {
+        color: #334a9b;
+    }
+
+    .ProductCategoryHeader {
+        background: none;
+    }
+
+    .BasePropertyOfProduct {
+        background-color: #334a9b
+    }
+
+    .Description, .TextDescription .Summary, .TextDescription .CountryOrigin, .CommonQuestions {
+        color: #334a9b;
+        font-weight: bold;
+        background: rgb(93,93,93);
+    }
+
+    .TextDescription .CountryOrigin {
+        color: #334a9b;
+        font-weight: bold;
+    }
+
+    .TextDescription .Summary {
+        color: #334a9b;
+        font-weight: bold;
+    }
+
+    .FileTypeImage {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+
+    .SelectPartNumber {
+        color: #334a9b;
+    }
+
+    .CompareSupplierName {
+        color: #334a9b;
+    }
+
+    .ProductCategoryTree > li .imgMasterproduct {
+        border: solid 1px #334a9b !important;
+    }
+
+    #StickyProductCategoryHeader {
+        background-color: transparent;
+        text-align: center;
+    }
+
+    div.StickyProductCategoryHeader {
+        background-color: #fff !important;
+    }
+
+    .imgProductCategoryHeader {
+        border-radius: 50%;
+    }
+
+    .Color-Withe {
+        color: #334a9b !important;
+    }
+
+    #MasterProduct img {
+        border: 1px solid #334a9b;
+    }
+
+    #TopProductCategory {
+        margin-left: 0 !important;
+        display: inline-block !important;
+    }
+
+    .HeaderTable tr td {
+        color: #334a9b !important;
+    }
+
+    .TitpePropertyInCompare {
+        color: #334a9b !important;
+        font-weight: bold;
+    }
+
+    .CompareTable tr td p {
+        color: #000 !important;
+    }
+
+    .CompareTable tr td {
+        color: #000;
+        padding: 10px 5px !important;
+    }
+
+    .CompareTable tr:hover {
+        color: #fff !important;
+        background-color: #d4d4d4;
+    }
+
+    .CompareItemButtonContainer {
+        color: #334a9b;
+    }
+
+    .CompareButton, .AddToListButton {
+        border: none !important;
+    }
+
+    .CompareButton {
+        width: 17px;
+        float: right;
+        margin: 0px 5px 5px 0;
+        cursor: pointer;
+    }
+
+    .DefineDetailProductsInMasterPageRole img {
+        border: 1px solid #334a9b;
+    }
+
+
+    .PopoverProductMenu > .Item {
+        padding: 0px;
+        margin: 2px 5px;
+    }
+
+        .PopoverProductMenu > .Item img {
+            height: 40px;
+        }
+
+    .StickyDefineHeader {
+        background-color: #d4d4d4;
+    }
+
+    /*.CompareTable col:nth-child(odd) {
+        background-color: transparent;
+    }
+
+    .CompareTable col:nth-child(even) {
+        background: #E2E2E2;
+    }*/
+
+    .CompareTable:hover {
+        background-color: #e9e9e9 !important;
+    }
+
+    .ShortTechnicalDescription {
+        color: #000 !important;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-wrapper-outer .owl-wrapper .owl-item .item a img {
+        border: 1px solid #334a9b;
+    }
+
+    .Description, .TextDescription .Summary, .TextDescription .CountryOrigin {
+        font-weight: 100 !important;
+        color: #fff !important;
+    }
+
+    .CompareItemPic {
+        min-height: 118px !important;
+    }
+
+    .DefineDescriptionFa {
+        color: #334a9b;
+        line-height: 25px;
+    }
+
+    .GeneratePartNumber-numbers {
+        color: #334a9b;
+    }
+
+    .GeneratePartNumber-searchlist-items {
+        color: #334a9b;
+    }
+
+    /* Sumico Under Construction Page - Mobile Size */
+    /* --------------------------------------------------- */
+    .underconstruct-wrapper {
+        color: #334a9b;
+    }
+
+    /* Sumico Banner Slider - Mobile Size */
+    /* ------------------------------------------ */
+    .owl-theme .owl-controls .owl-buttons div {
+        color: #334a9b;
+    }
+
+    .owl-theme .owl-controls .owl-page span {
+        background: #334a9b;
+    }
+
+    /* Sumico Services Image - Mobile Size */
+    /* ----------------------------------- */
+    .TrainingIcon {
+        content: url(../images/FooterServicesMobile.png);
+    }
+
+    /* Sumico CompareDetails Table - Mobile Size */
+    /* ----------------------------------------- */
+    .grid-comparetable {
+        color: #334a9b;
+    }
+
+    .TitpePropertyInCompare-BackColorOdd {
+        background-color: #e2e2e2;
+    }
+
+    
+
+
+
+    /* --- */
+    .AddToListButton {
+        display: none;
+    }
+
+    .AllDescriptions .DefineButtons .btnDefine:nth-child(2) {
+        display: none;
+    }
+
+    .btnInCompareHeader {
+        display: none !important;
+    }
+
+
+    /* Header - Mobile Size */
+    /* -------------------- */
+    .CursorText {
+        cursor: text;
+    }
+
+    .Bakward {
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+
+    .ComapreHeaderIconDesktop {
+        display: none !important;
+    }
+
+    .HeaderSumicoUserIcon {
+        display: none !important;
+    }
+
+    .SearchTextBox {
+        direction: ltr;
+        float: left;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        margin: 0px 10px 0px 5px;
+        margin-top: 5px;
+    }
+
+        .SearchTextBox .fa-search {
+            color: #334a9b;
+        }
+
+    .SearchTextBox-Icon {
+        width: 35px !important;
+        height: 35px !important;
+        display: inline-block;
+        position: absolute;
+        z-index: -1
+    }
+
+    .txtSearch {
+        color: #000;
+        height: 30px;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .SideMenu {
+        border-bottom: 1px solid #bbb !important;
+        display: flex;
+        flex-flow: row wrap;
+        direction: rtl;
+        padding: 10px 15px;
+    }
+
+    .CatalogMenuButton {
+        margin: 0px;
+        margin-left: 10px;
+ 
+    }
+
+    .SumicoLogoMobileSize {
+        /*margin-right: auto !important;*/
+    }
+
+    .SumicoLogoMobileSize img {
+        margin-top: 1px;
+        width: 133px !important;
+        height: 40px !important;
+        margin-right:35%;
+    }
+
+    .SideMenu .btnMenu {
+        height: 45px;
+        width: 45px;
+    }
+
+    .CatalogMenuButton img {
+        border: none;
+    }
+
+    .SideMenu img {
+        width: 40px;
+        height: auto;
+    }
+
+    .LogoInHeader {
+        /*margin-left: 50px;
+        margin-right: 0px;*/
+    }
+
+    .SearchControllerInMaster {
+        margin-right: auto;
+    }
+
+    #SignInIcon {
+        border: none;
+    }
+
+
+    /* Footer - Mobile Size */
+    /* -------------------- */
+
+    /* Footer Menu */
+    /* ----------- */
+    .FooterMenu {
+        padding: 0px;
+        text-align: center;
+        height: 75px;
+    }
+
+    .FooterMenuIcon {
+        width: 40px !important;
+        height: 40px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    .FooteMenuItem {
+        /*margin: 1px 5px !important;*/
+        text-align: center;
+        width: 11%;
+        margin: 1px auto !important;
+    }
+
+    /* Copyright */
+    /* --------- */
+    .Footer-CopyRight {
+        color: #334a9b;
+        font-size: 7px;
+        background-color: #fff;
+        padding: 5px 0px
+    }
+
+    .ContactIcon {
+        content: url(/images/SumicoContactIcon.png);
+    }
+
+    .TrainingIcon {
+        content: url(/images/SumicoServiceCenterIcon.png);
+    }
+
+    .RahkarhaIcon {
+        content: url(/images/SumicoRahkarhaIcon.png);
+    }
+
+    .ProductIcon {
+        content: url(/images/SumicoProductsIcon.png);
+    }
+
+    .NewsIcon {
+        content: url(/images/SumicoNewsIcon.png);
+    }
+
+    .ArticlesIcon {
+        content: url(/images/SumicoArticleIcon.png);
+    }
+
+    .MaterialIcon {
+        content: url(/images/SumicoAboutUsIcon.png);
+    }
+    
+    /* Sumico Default Page - Mobile Size */
+    /* --------------------------------- */
+
+    /* Banner Slider */
+    /* ------------- */
+    #DefaultPage-MainSlider {
+        border: 1px solid #bbb;
+    }
+
+    #DefaultPage-MainSlider .IndexBanner {
+        height: auto;
+    }
+
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-buttons div {
+        color: #334a9b;
+        font-size: 30px;
+        top: -100px;
+    }
+
+    #DefaultPage-MainSlider .defaultpage-maincarousel .owl-next {
+        right: -5px;
+    }
+
+    #DefaultPage-MainSlider .defaultpage-maincarousel .owl-prev {
+        left: -5px;
+    }
+
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-page span {
+        background-color: #334a9b;
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        margin: 0px;
+    }
+
+    #DefaultPage-MainSlider .owl-theme .owl-controls .owl-page {
+        border: 1px solid #334a9b;
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        margin: 5px 2px;
+    }
+
+    #DefaultPage-MainSlider .defaultpage-maincarousel .owl-pagination {
+        margin-top: -10px;
+    }
+
+    .UnderSpotPartNumber {
+        font-size: 12px;
+    }
+
+    .UnderSpotPartIndex {
+        margin-top: 7px;
+    }
+
+    /* Brands */
+    /* ------ */
+    .DefaultPage-Brands {
+        display: none;
+    }
+
+    /* Brand slider */
+    /* ------------ */
+    .DefaultPage-SliderBrands-Title {
+        color: #999;
+        font-family: 'IRANSans_Bold';
+        text-align: center;
+        font-size: 13px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .DefaultPage-SliderBrands {
+        text-align: center;
+        border-bottom: 1px solid #bbb;
+        padding: 5px 0px 15px 0px;
+    }
+
+    .DefaultPage-SliderBrands-OwlCarousel {
+
+    }
+
+    .DefaultPage-Brand-Item {
+
+    }
+
+    .DefaultPage-Brand-ItemImg {
+        border-right: 1px solid #bbb;
+        border-left: 1px solid #bbb;
+        padding: 0px 15px;
+        width: 60%;
+    }
+
+    #DefaultPage-SliderBrands .owl-next,
+    #DefaultPage-SliderBrands .owl-prev {
+        color: #334a9b !important;
+        font-size: 45px !important;
+        position: absolute;
+        top: -60px;
+        border: 1px solid #334a9b;
+        width: 40px;
+        height: 40px;
+    }
+
+    #DefaultPage-SliderBrands .owl-next i,
+    #DefaultPage-SliderBrands .owl-prev i {
+        position: absolute;
+        top: -5px;
+    }
+
+    .owl-theme .owl-controls .owl-buttons div {
+        opacity: 1 !important;
+    }
+
+    #DefaultPage-SliderBrands .owl-next i {
+        right: 8px;
+    }
+
+    #DefaultPage-SliderBrands .owl-prev i {
+        left: 8px;
+    }
+
+    #DefaultPage-SliderBrands .owl-next {
+        right: 3px;
+    }
+
+    #DefaultPage-SliderBrands .owl-prev {
+        left: 3px;
+    }
+
+    /* Product slider title */
+    /* -------------------- */
+    .DefaultPage-PorductSliderTitle {
+        color: #999;
+        font-family: 'IRANSans_Bold';
+        text-align: center;
+        font-size: 13px;
+        margin: 10px 0px 5px 0px;
+    }
+
+    /* Product slider */
+    /* -------------- */
+    #UnderSpotDefineDetailProduct .owl-wrapper-outer .owl-wrapper .owl-item .item a img {
+        border-radius: 7px;
+        border: 1px solid #888;
+    }
+
+    .DefaultCarouselContainer {
+        padding: 0px 30px !important;
+        margin-bottom: -1px;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next,
+    #UnderSpotDefineDetailProduct .owl-prev {
+        color: #334a9b !important;
+        font-size: 45px !important;
+        top: -107px;
+        opacity: 0.5 !important;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next:hover,
+    #UnderSpotDefineDetailProduct .owl-prev:hover {
+        opacity: 1 !important;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-next {
+        right: -32px;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-prev {
+        left: -32px;
+    }
+
+    .DefaultPage-ProductSlider-Item {
+        margin: 5px;
+    }
+
+    .DefaultPage-DefineItemImage {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .DefaultPage-ProductSlider-Decs {
+        width: 70%;
+        float: left;
+    }
+
+    .UnderSpotPartIndex {
+        margin-top: 5px;
+    }
+
+    .DefaultPage-ProductSlider-Buttons {
+        width: 30%;
+        float: left;
+    }
+
+    .DefaultPage-ProductSlider-CompareButton {
+        float: right;
+    }
+
+    #UnderSpotDefineDetailProduct .owl-item.active > img:after {
+        border: 2px solid #334a9b;
+    }
+
+    /* SocialMedia Contacts */
+    /* -------------------- */
+    .DefaultPage-SocialMediaWrapper {
+        background-color: white;
+        padding-bottom: 80px;
+    }
+
+    .DefaultPage-SocialMediaTitle {
+        color: #999;
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .DefaultPage-SocialMediaBody {
+        display: flex;
+        justify-content: center;
+    }
+
+    .DefaultPage-SocialMediaIcon {
+        cursor: pointer;
+        margin: 0px 2px;
+    }
+
+        .DefaultPage-SocialMediaIcon img {
+            width: 40px;
+            height: 40px;
+        }
+
+    /* ArticleCategory Page - Mobile Size */
+    /* ---------------------------------- */
+    .RightSideArticleList .RightSideArticleHeader {
+        background-color: #334a9b;
+        color: #fff;
+    }
+
+    .RightSideArticleContainer-ContentOuter-title {
+        text-align: center;
+    }
+
+    .Article-MenuBar,
+    .RightSideArticleList,
+    .LeftSideArticleList {
+        background-color: #eee;
+    }
+
+    .ArticleListContainer-Inner {
+        margin-bottom: 50px;
+    }
+
+    .LeftSideArticleList a {
+        color: #666695 !important;
+    }
+
+    .LeftSideArticleList-Header-LinkEnActive, .LeftSideArticleList-Header-LinkFaActive {
+        color: #636569 !important;
+    }
+
+    .TitleTopArticleContent span {
+        color: #636569 !important;
+    }
+
+    .AbstractArticle {
+        color: #636569 !important;
+    }
+
+    /*.imgTopArticleContent {
+        width: 3
+    }*/
+
+    .ContentTitle {
+        padding-top: 20px;
+        padding-bottom: 2px;
+    }
+
+    /* Article Page - Desktop Size */
+    /* --------------------------- */
+    .ArticleDescription_Fa p {
+        color: #636569 !important;
+    }
+
+}

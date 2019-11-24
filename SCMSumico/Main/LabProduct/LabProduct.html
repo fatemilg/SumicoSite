@@ -1,0 +1,103 @@
+﻿<title>Product Category</title>
+<div ng-controller="LabProductController">
+    <div class="LabProduct">
+        <div class="LabProductContainer">
+            <div class="clearfix"></div>
+            <div class="divSelectProductCategory">
+                <b class="labelSelectProductCategory"> انتخاب گروه محصول  </b>
+                <div id="GenerateLabProductCategory" data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: false, rewindNav : false,itemsMobile: [500,1],itemsTablet: [1024,6],itemsDesktop : [3000,6],SelectedSort:{{SelectedCategoryIndex != undefined ? SelectedCategoryIndex : 0}}}">
+                    <div data-owl-carousel-item ng-repeat="ProductCategory in LabProduct" class="item">
+
+                        <div ng-click="SelectProductCategory(ProductCategory.MasterProducts,$index)">
+                            <div class="divImgSelectProductCategory" >
+                                <img ng-src="{{ServerUrl + ProductCategory.PicUrl}}" class="ImgSelectProductCategory" ng-class="{ActiveCategory: $index==SelectedCategoryIndex}" />
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="divTitleProductCategory">
+                                <span class="FaTitle">{{ProductCategory.Name_Fa}} </span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+            <div ng-if="SelectedMasterProdcut!=undefined">
+                <div class="divSelectProduct">
+                    <b class="labelSelectProduct"> انتخاب نوع محصول  </b>
+                    <div id="GenerateLabProducts" data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: false, rewindNav : false,itemsMobile: [500,1],itemsTablet: [1024,1],itemsDesktop : [3000,1],SelectedSort:{{SelectedMasterIndex != undefined ? SelectedMasterIndex : 0}}}">
+                        <div data-owl-carousel-item ng-repeat="MasterProduct in SelectedMasterProdcut" class="item">
+
+
+                            <div class="divImgSelectProduct">
+                                <img ng-src="{{ServerUrl + MasterProduct.ProductUrl}}" class="ImgSelectProduct" ng-class="{ActiveProduct: $index==SelectedMasterForActivationIndex}" ng-click="GetTreeRulePropertyByIDProduct(MasterProduct.IDX,$index)" />
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="divTitleProduct">
+                                <span class="FaTitle"> {{MasterProduct.Name_Fa}} </span>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="divSelectProperty" class="divSelectProperty" ng-repeat="li in XPartNumber" ng-if="li.AvailableLists.length > 1 && li.AvailableLists[0].Value != '-' && li.AvailableLists[1].Value != '-'">
+                    <b class="labelSelectPropertyFa"> انتخاب {{li.Name_Fa + ' ' + li.HeadName}} </b>
+                    <div id="GenerateLabProducts" data-owl-carousel class="owl-carousel GenerateLabProducts{{$index}}" data-options="{navigation: true, pagination: false, rewindNav : false,itemsMobile: [500,1],itemsTablet: [1024,1],itemsDesktop : [3000,1],SelectedSort:{{li.SelectedItemIndex != undefined ? li.SelectedItemIndex : 0}}}">
+                        <div data-owl-carousel-item ng-repeat="pr in li.AvailableLists | orderBy : '-Name_En'" class="item">
+
+
+                            <div class="divImgSelectProperty">
+                                <img src="{{ServerUrl + GetPropertyPic(pr.IDX)}}" class="ImgSelectProperty" ng-class="{ActiveProperty: $index==li.SelectedPropertyForActivationIndex}" ng-click="GenerateRestOfProperties(pr,$parent.$index+1,$index,true)" />
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="divTitleProperty">
+                                <span class="EnTitle" ng-click="GenerateRestOfProperties(pr,$parent.$index+1,$index,true)">{{pr.Name_En}}</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div ng-if="LastItemSelecting" class="LastItemSelecting">
+                    <form name="GenerateProductForm" novalidate>
+                        <div class="divSelectMeter">
+                            <b class="labelSelectMeter"> انتخاب متراژ  </b>
+                            <div>
+                                <b class="lblMeter"> متراژ محصول  :</b>
+                                <input name="MeterProductLab" type="number" class="input-control inputMeter" ng-model="CurrentProductLab.Meter" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.1" required ng-maxlength="4" min="0.1" max="100" placeholder="0.1" onfocus="this.placeholder = ''" onblur="this.placeholder = '0.1'" />
+                                <b class="lblMeter"> (متر)</b>
+                            </div>
+                            <div class="clearfix"></div>
+                            <b class="errorMessage" ng-show="!GenerateProductForm.MeterProductLab.$valid">
+                                متراژ را در بازه صحیح انتخاب کنید!
+                            </b>
+                            <div class="clearfix"></div>
+                            <span class="Tip">- اﻧﺘﺨﺎب ﻣﺘﺮاژ ﻣﺤﺼﻮل از 0.1 ﺗﺎ  99.9 متر با ﺣﺪاﮐﺜﺮ ﯾﮏ ﻋﺪد اﻋﺸﺎر ﻣﺠﺎز ﻣﯿﺒﺎﺷد.</span>
+                            <div class="clearfix"></div>
+                            <span class="Tip">- ﺟﻬﺖ ﺳﻔﺎرﺷﺎت ﺧﺎص ﺑﺎ واﺣﺪ ﻓﺮوش ﺗﻤﺎس ﺣﺎﺻﻞ ﺑﻔﺮﻣﺎﯾید.</span>
+                        </div>
+
+                        <input type="button" value="نمایش محصول نهایی" class="button-control btnGotoDefinePage" ng-click="GoToDefineDetailProductPage()" ng-if="GenerateProductForm.MeterProductLab.$valid" />
+
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="divNote" ng-if="OtherCategoriesClicked">
+                <span class="context"> جهت هر گونه سوال یا اطلاعات بیشتر در این خصوص با شماره</span><span class="phone"> 43614130-021 </span><span class="context"> تماس حاصل فرمایید.</span>
+            </div>
+        </div>
+    </div>
+
+</div>

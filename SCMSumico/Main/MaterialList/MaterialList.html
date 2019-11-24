@@ -1,0 +1,55 @@
+﻿<div ng-controller="MaterialListController">
+    <div class="MaterialContainer">
+        <div class="divHeader">
+            <div class="HeaderPart1">
+                <h5 class="TitleEn">Material List</h5>
+                <h5 class="TitleFa">لیست تجهیزات</h5>
+            </div>
+            <div class="HeaderPart2">
+                <input id="btnChangeModifyMode" type="button" value="Modify" class="button-control" ng-click="ChangeModifyMode()" />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="divContainer">
+            <div class="MaterialLists" ng-repeat="Item in MaterialLists">
+                <div class="divCounterItems" ng-if="!ModifyMode">{{$index+1}}</div>
+                <label class="CheckBoxContainer" ng-if="ModifyMode">
+                    <input type="radio" name="radioMaterial" ng-click="SelectMaterialItem(Item)">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="MaterialLevel1" ng-class="{CursorPointer: !ModifyMode && !Item.SubList }">
+                    <span ng-click="DirectToMaterialListItem(Item)" ng-hide="ModifyMode && Item.Selected && EditMode">{{Item.Title}}</span>
+                    <input type="text" class="inputControl" ng-if="ModifyMode && Item.Selected && EditMode" ng-model="Item.Title" ng-change="UpdateTitleMaterial(Item.Title,Item.IDMaterialList)" ng-model-options="{debounce: 2000}" descriptionpattern maxlength="50" />
+                    <i class="fa fa-times RomeveMaterial" ng-if="ModifyMode && Item.Selected && DeleteMode" ng-click="DeleteMaterialSelected(Item)"></i>
+                </div>
+                <div class="clearfix"></div>
+                <div class="SubMaterialList" ng-repeat="sub in Item.SubList">
+                    <div class="divCounterSubs" ng-if="!ModifyMode">{{$parent.$parent.$index+1}}-{{$index+1}}</div>
+                    <label class="CheckBoxContainer" ng-if="ModifyMode">
+                        <input type="radio" name="radioMaterial" ng-click="SelectMaterialItem(sub)">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="MaterialLevel2" ng-class="{CursorPointer: !ModifyMode && !sub.SubList}">
+                        <span ng-click="DirectToMaterialListItem(sub)" ng-hide="ModifyMode && sub.Selected && EditMode">{{sub.Title}}</span>
+                        <input type="text" class="inputControl" ng-if="ModifyMode && sub.Selected && EditMode" ng-model="sub.Title" ng-change="UpdateTitleMaterial(sub.Title,sub.IDMaterialList)" ng-model-options="{debounce: 2000}" descriptionpattern maxlength="50" />
+                        <i class="fa fa-times RomeveMaterial" ng-if="ModifyMode && sub.Selected && DeleteMode" ng-click="DeleteMaterialSelected(sub)"></i>
+                    </div>
+                </div>
+
+            </div>
+ 
+
+          
+        </div>
+        <div class="clearfix"></div>
+
+
+        <div class="divFooter" ng-if="ModifyMode">
+            <i id="btnDeleteButton" class="fa fa-trash-o DeleteButton" ng-click="ClickDeleteButton()" title="حذف"></i>
+            <i id="btnEditButton" class="fa fa-pencil EditButton" ng-click="ClickEditButton()" title="ویرایش"></i>
+        </div>
+
+    </div>
+
+
+</div>

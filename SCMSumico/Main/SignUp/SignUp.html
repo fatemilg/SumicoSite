@@ -1,0 +1,140 @@
+﻿
+<head>
+    <title>
+        SignUp
+    </title>
+</head>
+
+<div ng-controller="SignUpController" class="divSignUp">
+
+    <div class="SignUpContainer">
+        <div class="SignUpSection">
+            <div class="CommonPart">
+                <form id="FormSignUpCommonPart" name="FormSignUpCommonPart">
+                    <lable class="NationalCode">کد ملی :</lable>
+                    <div class="clearfix"></div>
+                    <input name="newUserNationalCode" type="text" class="input-control Align-Left" islet-iran-national-id maxlength="10" minlength="10" ng-model="newUser.NationalCode" required ng-class="{ 'has-error' : FormSignUpCommonPart.newUserNationalCode.$invalid && FormSignUpCommonPart.newUserNationalCode.$dirty  }" ng-change="MeliCodeChange()" />
+                    <input type="button" value="بررسی" class="button-control" ng-disabled="FormSignUpCommonPart.$invalid" ng-click="GetUserSiteByNationalCode(newUser.NationalCode)" />
+                    <div class="clearfix"></div>
+                    <span class="MessageError">{{MessageError}}</span>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+            <div id="divNewUser" class="NewUser" ng-if="ShowNewUser">
+                <form id="FormSignUpNewUser" name="FormSignUpNewUser" novalidate>
+                    <div>
+                        <lable>نام :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserFName" type="text" class="input-control Align-Right" ng-model="newUser.FName" maxlength="50" descriptionpattern required />
+                    </div>
+                    <div>
+                        <lable>نام خانوادگی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserLName" type="text" class="input-control Align-Right" ng-model="newUser.LName" maxlength="50" descriptionpattern required />
+                    </div>
+                    <div ng-repeat=" qu in QuestionCustomerForSignUp">
+
+                        <lable>{{qu.Question_Fa}} :</lable>
+                        <div class="clearfix"></div>
+                        <select name="qu{{$index}}" ng-model="qu.IDOptionCustomer" class="input-control Align-Right" ng-options="x.IDOptionCustomer as x.Option_Fa for x in qu.OptionCustomer" required  >
+                            <option value="" selected="selected" label="انتخاب کنید"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <lable> نام کمپانی/سازمان :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserCompanyName" type="text" class="input-control Align-Right" ng-model="newUser.CompanyName" maxlength="50" descriptionpattern />
+                    </div>
+                    <div>
+                        <lable> تلفن همراه (09xx-xxx-xxx) :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserMobile" type="text" class="input-control Align-Left" ng-model="newUser.Mobile" numbers-only maxlength="12" required ng-pattern="MobileFormat" />
+                    </div>
+                    <div>
+                        <lable> پست الکترونیک :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserEmail" type="text" class="input-control Align-Left" ng-model="newUser.Email" maxlength="50" ng-pattern="emailFormat" required />
+                    </div>
+                    <div>
+                        <lable> رمز عبور :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserPassword" type="password" class="input-control Align-Left" ng-model="newUser.Password" maxlength="20" descriptionpattern required />
+                    </div>
+                    <div>
+                        <lable> تکرار رمز عبور :</lable>
+                        <div class="clearfix"></div>
+                        <input name="newUserRePassword" type="password" class="input-control Align-Left" ng-model="newUser.RePassword" maxlength="20" descriptionpattern confirm match-target="newUser.Password" required />
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div>
+                        <img id="newUserImgCaptcha" style="width:150px;float:left;margin-bottom: 5px;" /><i class="fa fa-refresh" style="float:left;margin:10px 0 0 10px;cursor:pointer" ng-click="GetCaptcha()"></i>
+                        <br />
+                        <lable>کد امنیتی :</lable>
+                        <input type="text" id="CaptchaEnroll" class="input-control Align-Left" ng-model="newUser.newUserCaptchaEnroll" name="newUserCaptchaEnroll" required maxlength="5" confirm match-target="Captcha.CaptchaText" />
+                    </div>
+                    <div class="clearfix"></div>
+                    <div>
+                        <input type="submit" value="ثبت نام" class="button-control" ng-click="EnrollNewUser(FormSignUpNewUser,newUser)" />
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserFName.$dirty || submitted) && FormSignUpNewUser.newUserFName.$error.required" class="txtValidation Align-Right"> نام را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserLName.$dirty || submitted) && FormSignUpNewUser.newUserLName.$error.required" class="txtValidation Align-Right"> نام خانوادگی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <div ng-repeat=" qu in QuestionCustomerForSignUp">
+                            <span style="float:right" ng-show="(FormSignUpNewUser.qu{{$index}}.$dirty || submitted) && FormSignUpNewUser.qu{{$index}}.$error.required" class="txtValidation Align-Right">   <spna>{{qu.Question_Fa}} </spna>را انتخاب کنید  !</span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserMobile.$dirty || submitted) && FormSignUpNewUser.newUserMobile.$error.required" class="txtValidation Align-Right">  تلفن همراه را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserEmail.$dirty || submitted) && FormSignUpNewUser.newUserEmail.$error.required" class="txtValidation Align-Right">  پست الکترونیک را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserPassword.$dirty || submitted) && FormSignUpNewUser.newUserPassword.$error.required" class="txtValidation Align-Right">  رمز عبور را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserCaptchaEnroll.$dirty || submitted) && FormSignUpNewUser.newUserCaptchaEnroll.$error.required" class="txtValidation Align-Right">  کد امنیتی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserMobile.$error.pattern )" class="txtValidation Align-Right">  تلفن همراه را در فرمت صحیح وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="(FormSignUpNewUser.newUserEmail.$error.pattern )" class="txtValidation Align-Right">  پست الکترونیک را در فرمت صحیح وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="FormSignUpNewUser.newUserRePassword.$error.match" class="txtValidation Align-Right"> عدم تطابق رمز عبور با تکرار آن !</span>
+                        <div class="clearfix"></div>
+                        <span style="float:right" ng-show="FormSignUpNewUser.newUserCaptchaEnroll.$error.match && newUser.newUserCaptchaEnroll.length==5 " class="txtValidation Align-Right"> عدم تطابق کد امنیتی !</span>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </form>
+            </div>
+            <div id="divOldUser" class="OldUser" ng-if="ShowOldUser">
+                <form id="FormSignUpOldUser" name="FormSignUpOldUser">
+                    <div>
+                        <lable> پست الکترونیک :</lable>
+                        <div class="clearfix"></div>
+                        <input name="oldUserEmail" type="text" class="input-control Align-Left" ng-model="oldUser.Email" maxlength="50" ng-pattern="emailFormat" required />
+                    </div>
+                    <div class="clearfix"></div>
+                    <div>
+
+                        <img id="oldUserImgCaptcha" style="width:150px;float:left;margin-bottom: 5px;" /><i class="fa fa-refresh" style="float:left;margin:10px 0 0 10px;cursor:pointer" ng-click="GetCaptcha()"></i>
+                        <br />
+                        <lable>کد امنیتی :</lable>
+                        <input type="text" id="CaptchaEnroll" class="input-control Align-Left" ng-model="oldUserCaptchaEnroll" name="oldUserCaptchaEnroll" required maxlength="6" />
+                        <span style="float:right" ng-hide="FormSignUpOldUser.oldUserCaptchaEnroll.$valid || FormSignUpOldUser.oldUserCaptchaEnroll.$pristine" class="txtValidation Align-Right"> کد امنیتی را وارد کنید!</span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                    <div>
+                        <input type="button" value="ارسال رمز عبور" class="button-control" ng-disabled="FormSignUpOldUser.$invalid" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="SignInContainer">
+        <div class="SignInSection">
+            <span style="color:white">قبلا در فربین ثبت‌ نام کرده‌اید؟  </span>
+            <a href="/#!/SignIn"><span class="SignInLink">وارد شوید</span></a>
+        </div>
+    </div>
+
+</div>

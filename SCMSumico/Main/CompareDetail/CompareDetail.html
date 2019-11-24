@@ -1,0 +1,38 @@
+﻿<title>Compare Detail</title>
+<div ng-controller="CompareDetailController" style="height: 100%">
+    <div class="container-fluid CompareDetailContainer">
+        <div class="row CompareTable" id="StickyDefineHeader">
+            <div class="TitpePropertyInCompare grid-comparetable centering">
+                <img src="/images/Compare.png" class="CompareLogo" />
+                Compare
+            </div>
+            <div class="grid-comparetable" ng-class-odd="'TitpePropertyInCompare-BackColorOdd'" ng-repeat="DefineDetail in TechnicalPropertiesDetails[0].CompareDetail" style="position: relative; left: -1px;">
+                <div class="CompareSupplierName">{{DefineDetail.SupplierName_En}}</div>
+                <a href="/#!/DefineDetailProduct/{{DefineDetail.IDX}}"><img ng-src="{{ServerUrl + DefineDetail.PicUrl}}" class="CompareItemImage" /></a>
+                <div class="clearfix"></div>
+
+                <div class="CompareItemButtonContainer">
+                    {{DefineDetail.PartNumber}}
+                    <div class="btnInCompareHeader">
+                        <img ng-src="{{ServerUrl +DefineDetail.IndexDescriptionPicUrl}}" class="IndexDescritionPicInCompare" />
+                        <img src="/images/AddToListWhite.png" class="AddToListButton" data-placement="left" tooltip title="Add to List" ng-click="AddToMaterialList(DefineDetail.IDDefineDetailProduct)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scrollable-body">
+            <div class="row CompareTable" ng-repeat="Property in PropertiesDetails">
+                <div class="TitpePropertyInCompare grid-comparetable">{{Property.TitleProperty}}</div>
+                <div ng-class-odd="'TitpePropertyInCompare-BackColorOdd'" class="grid-comparetable" ng-repeat="Detail in Property.CompareDetail">
+                    {{Detail.ValuesProperty[0].Value !=udefined ? Detail.ValuesProperty[0].Value : '---'}}
+                </div>
+            </div>
+            <div class="row CompareTable" ng-repeat="Property in TechnicalPropertiesDetails">
+                <div class="TitpePropertyInCompare grid-comparetable">{{Property.TitleProperty}}</div>
+                <div ng-class-odd="'TitpePropertyInCompare-BackColorOdd'" class="grid-comparetable" ng-repeat="Detail in Property.CompareDetail">
+                    <div style="max-width:250px" ng-bind-html="Detail.ValuesProperty[0].Value !=udefined ? Detail.ValuesProperty[0].Value : '---'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

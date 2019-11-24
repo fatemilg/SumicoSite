@@ -1,0 +1,73 @@
+﻿<title>Sumico</title>
+<div data-ng-controller="DefaultController" style="line-height:15px;">
+    <!--<div class="IndexBanner"></div>-->
+    <!-- Main Slider -->
+    <div id="DefaultPage-MainSlider" data-owl-carousel class="owl-carousel defaultpage-maincarousel" data-options="{navigation: true, pagination: true, rewindNav : true,itemsMobile: [500,1],itemsTablet: [1024,1],itemsDesktop : [3000,1]}">
+        <div data-owl-carousel-item data-ng-repeat="BannerUrl in BannerUrls">
+            <a class="item"><img class="IndexBanner" ng-src="{{IsMobile ? ServerUrl+BannerUrl.PicUrl_Mobile : ServerUrl+BannerUrl.PicUrl }} " /></a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!--<div ng-repeat="sp in Suppliers">
+        <div style="color: black">{{sp.Name_En}}</div>
+    </div>-->
+
+    <!-- Brands -->
+    <div class="DefaultPage-Brands">
+        <div class="DefaultPage-Brand"><a href="/#!/ProductCategory/13/0"><img src="../../images/SumicoBrand1.png" /></a></div>
+        <div class="DefaultPage-Brand"><a href="/#!/ProductCategory/10/0"><img src="../../images/SumicoBrand2.png" /></a></div>
+        <div class="DefaultPage-Brand"><a href="/#!/LabProduct/9/1"><img src="../../images/SumicoBrand3.png" /></a></div>
+        <div class="DefaultPage-Brand"><a href="/#!/ProductCategory/11/0"><img src="../../images/SumicoBrand4.png" /></a></div>
+    </div>
+
+    <!-- Brands slider -->
+    <div class="DefaultPage-SliderBrands">
+        <div id="DefaultPage-SliderBrands" class="owl-carousel DefaultPage-SliderBrands-OwlCarousel">
+            <div class="DefaultPage-Brand-Item"><a href="/#!/ProductCategory/13/0"><img class="DefaultPage-Brand-ItemImg" src="../../images/SumicoBrand1.png" /></a></div>
+            <div class="DefaultPage-Brand-Item"><a href="/#!/ProductCategory/10/0"><img class="DefaultPage-Brand-ItemImg" src="../../images/SumicoBrand2.png" /></a></div>
+            <div class="DefaultPage-Brand-Item"><a href="/#!/LabProduct/9/1"><img class="DefaultPage-Brand-ItemImg" src="../../images/SumicoBrand3.png" /></a></div>
+            <div class="DefaultPage-Brand-Item"><a href="/#!/ProductCategory/11/0"><img class="DefaultPage-Brand-ItemImg" src="../../images/SumicoBrand4.png" /></a></div>
+        </div>
+    </div>
+
+    <!-- Products title -->
+    <div class="DefaultPage-PorductSliderTitle">جدیدترین ها</div>
+    <!-- Products slider -->
+    <div class="DefaultCarouselContainer">
+        <div style=" margin-bottom: 50px;">
+            <div tapdetector id="UnderSpotDefineDetailProduct" data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: false, rewindNav : true,itemsMobile: [500,2],itemsTablet: [1024,3],itemsDesktop : [3000,3]}">
+                <div data-owl-carousel-item data-ng-repeat="UnderConstractionDefineDetailProduct in UnderConstractionDefineDetailProducts" class="DefaultPage-ProductSlider-Item item">
+                    <a href="#!/DefineDetailProduct/{{UnderConstractionDefineDetailProduct.IDX}}">
+                        <img ng-src="{{ServerUrl + UnderConstractionDefineDetailProduct.PicUrl}}" class="DefaultPage-DefineItemImage DefineItemImage{{UnderConstractionDefineDetailProduct.IDX}}">
+                        <div class="DefaultPage-ProductSlider-Decs">
+                            <span class="UnderSpotPartNumber">{{UnderConstractionDefineDetailProduct.PartNumber}}</span>
+                            <div class="clearfix"></div>
+                            <span class="UnderSpotPartIndex">{{UnderConstractionDefineDetailProduct.IndexDescriptionText}}</span>
+                        </div>
+                    </a>
+                    <div class="DefaultPage-ProductSlider-Buttons" style="display:none">
+                        <div class="DefaultPage-ProductSlider-CompareButton">
+                            <img src="/images/AddToListWhite.png" class="AddToListButton" data-placement="left" title="Add to List" ng-click="AddToMaterialList(UnderConstractionDefineDetailProduct.IDDefineDetailProduct)" />
+
+                            <div class="clearfix"></div>
+                            <img src="/images/Compare.png" class="CompareButton" data-placement="left" title="Compare" ng-click="AddToCompareList(UnderConstractionDefineDetailProduct.IDDefineDetailProduct,'DefineItemImage' + UnderConstractionDefineDetailProduct.IDX)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+
+    <!-- SocialMedia Contacts -->
+    <div class="DefaultPage-SocialMediaWrapper">
+        <h5 class="DefaultPage-SocialMediaTitle">با شما در  شبکه های اجتماعی</h5>
+        <div class="DefaultPage-SocialMediaBody">
+            <a class="DefaultPage-SocialMediaIcon" href="http://www.aparat.com/sumico"><img src="../../images/SumicoAparatIcon.png" /></a>
+            <a class="DefaultPage-SocialMediaIcon" href="https://t.me/Iransumitomo"><img src="../../images/SumicoTelegramIcon.png" /></a>
+            <a class="DefaultPage-SocialMediaIcon" href="https://www.instagram.com/sumico.ir/"><img src="../../images/SumicoInstagramIcon.png" /></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+﻿<div class="DictionaryDescPage-Wrapper" ng-controller="DictionaryDescriptionController">
+    <img ng-src="{{CurrentUrlQRCode}}" class="QRCode DictionaryDescPage-QRCode" />
+    <span class="DictionaryDescPage-QRCodeDesc">!در موبایل یا تبلت بخوانید</span>
+    <div class="DictionaryDescPage-Inner">
+        <div class="DictionaryDescPage-Title">{{DictionaryDesc.Title}}</div>
+        <div class="DictionaryDescPage-Description" ng-bind-html="DictionaryDesc.Value"></div>
+    </div>
+</div>

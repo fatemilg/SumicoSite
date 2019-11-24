@@ -1,0 +1,8 @@
+﻿<div class="PopoverProductMenu" ng-controller="SupplierController">
+    <div class="Item SupplierItemInMenu" ng-repeat="Supplier in Suppliers">
+        <a id="MenuIDX" onclick="HidePopoverProductMenu()" href="{{Supplier.IDX == 9 ? '/#!/LabProduct/'+Supplier.IDX + '/1' :'/#!/ProductCategory/'+Supplier.IDX+'/0'}}" ng-click="ResetLabProduct(Supplier.Name_En)">
+            <img ng-src="{{ServerUrl + Supplier.PicUrl}}" />
+            <div class="clearfix"></div>
+        </a>
+    </div>
+</div>

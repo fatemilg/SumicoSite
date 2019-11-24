@@ -1,0 +1,453 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A049EAC6-41C6-40A7-9451-E5CA05E9E715}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCMSumico</RootNamespace>
+    <AssemblyName>SCMSumico</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\CheckBoxCustome.css" />
+    <Content Include="dist\Script.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="images\AbouUS.png" />
+    <Content Include="images\Aparat.png" />
+    <Content Include="images\BackButton.jpg" />
+    <Content Include="images\DefaultPageDesktopBanner.jpg" />
+    <Content Include="images\DefaultPageDesktopBanner.png" />
+    <Content Include="images\DefaultPageMobileBanner.jpg" />
+    <Content Include="images\exhibition98-desktop.png" />
+    <Content Include="images\exhibition98-mobile.png" />
+    <Content Include="images\Factory.png" />
+    <Content Include="images\FooterServices.png" />
+    <Content Include="images\comment2.png" />
+    <Content Include="images\FiberProperty.jpg" />
+    <Content Include="images\FooterServicesMobile.png" />
+    <Content Include="images\GaranteeLogo.png" />
+    <Content Include="images\heart outline2.png" />
+    <Content Include="images\LinkedIn.png" />
+    <Content Include="images\MainOffice.png" />
+    <Content Include="images\MobileAbouUS.png" />
+    <Content Include="images\Patch Cord Duplex.png" />
+    <Content Include="images\Patch Cord Simplex.png" />
+    <Content Include="images\PDF-Red.png" />
+    <Content Include="images\Pigtail.png" />
+    <Content Include="images\SUMICO Logo- BLACK.png" />
+    <Content Include="images\SumicoAboutUsIcon.png" />
+    <Content Include="images\SumicoAparatIcon.png" />
+    <Content Include="images\SumicoArticleIcon.png" />
+    <Content Include="images\SumicoBrand1.png" />
+    <Content Include="images\SumicoBrand2.png" />
+    <Content Include="images\SumicoBrand3.png" />
+    <Content Include="images\SumicoBrand4.png" />
+    <Content Include="images\SumicoCompareIcon.png" />
+    <Content Include="images\SumicoContactIcon.png" />
+    <Content Include="images\SumicoFilterIcon.png" />
+    <Content Include="images\SumicoFullName.png" />
+    <Content Include="images\SumicoInstagramIcon.png" />
+    <Content Include="images\SumicoLeftMenuIcon.png" />
+    <Content Include="images\SumicoNewsIcon.png" />
+    <Content Include="images\SumicoProductsIcon.png" />
+    <Content Include="images\SumicoRahkarhaIcon.png" />
+    <Content Include="images\SumicoRightMenuIcon.png" />
+    <Content Include="images\SumicoSearchIcon.png" />
+    <Content Include="images\SumicoServiceCenterIcon.png" />
+    <Content Include="images\SumicoSortIcon.png" />
+    <Content Include="images\SumicoTelegramIcon.png" />
+    <Content Include="images\SumicoUserIcon.png" />
+    <Content Include="images\writingaaa.png" />
+    <Content Include="Main\AboutUs\AboutUs.html" />
+    <Content Include="Main\ArticleCategory\ArticleCategory.html" />
+    <Content Include="Main\Article\Article.html" />
+    <Content Include="Main\CommonController\AboutUsController.js" />
+    <Content Include="Main\CommonController\ArticleCategoryController.js" />
+    <Content Include="Main\CommonController\ArticleController.js" />
+    <Content Include="Main\CommonController\CatalogController.js" />
+    <Content Include="Main\CommonController\CompareController.js" />
+    <Content Include="Main\CommonController\CompareDetailController.js" />
+    <Content Include="Main\CommonController\ContactUsController.js" />
+    <Content Include="Main\CommonController\DefaultController.js" />
+    <Content Include="Main\CommonController\DefineDetailProductController.js" />
+    <Content Include="Main\CommonController\DefineDetailProductLabController.js" />
+    <Content Include="Main\CommonController\DictionaryDescriptionController.js" />
+    <Content Include="Main\CommonController\FooterController.js" />
+    <Content Include="Main\CommonController\GuaranteeController.js" />
+    <Content Include="Main\CommonController\IndexController.js" />
+    <Content Include="Main\CommonController\LabProductController.js" />
+    <Content Include="Main\CommonController\LoginController.js" />
+    <Content Include="Main\CommonController\MasterProductController.js" />
+    <Content Include="Main\CommonController\MaterialListController.js" />
+    <Content Include="Main\CommonController\MaterialListItemController.js" />
+    <Content Include="Main\CommonController\ProductCategoryController.js" />
+    <Content Include="Main\CommonController\SearchController.js" />
+    <Content Include="Main\CommonController\SideUserMenuController.js" />
+    <Content Include="Main\CommonController\SignInController.js" />
+    <Content Include="Main\CommonController\SignUpController.js" />
+    <Content Include="Main\CommonController\SupplierController.js" />
+    <Content Include="Main\CommonController\UnderConstructionController.js" />
+    <Content Include="Main\CommonDirectives\ConfirmDirective.js" />
+    <Content Include="Main\CommonDirectives\DescriptionPatternDirective.js" />
+    <Content Include="Main\CommonDirectives\DynamicSlideTogglingDriective.js" />
+    <Content Include="Main\CommonDirectives\LazyLoadingScrollDirective.js" />
+    <Content Include="Main\CommonDirectives\OnlyNumberDirective.js" />
+    <Content Include="Main\CommonDirectives\OwlCarouselDirective.js" />
+    <Content Include="Main\CommonDirectives\TableDirective.js" />
+    <Content Include="Main\CommonDirectives\TooltipDirective.js" />
+    <Content Include="Main\CommonDirectives\TypePersianDirective.js" />
+    <Content Include="Main\CommonFactories\DefineDetailFactory.js" />
+    <Content Include="Main\CommonServices\AccessoryProductService.js" />
+    <Content Include="Main\CommonServices\AttachInterfaceCategoryService.js" />
+    <Content Include="Main\CommonServices\BannerService.js" />
+    <Content Include="Main\CommonServices\CaptchaService.js" />
+    <Content Include="Main\CommonServices\CatalogService.js" />
+    <Content Include="Main\CommonServices\CommentService.js" />
+    <Content Include="Main\CommonServices\ContentCategoryService.js" />
+    <Content Include="Main\CommonServices\ContentCategoryTypeService.js" />
+    <Content Include="Main\CommonServices\ContentModuleRetService.js" />
+    <Content Include="Main\CommonServices\ContentService.js" />
+    <Content Include="Main\CommonServices\DefineDetailProductService.js" />
+    <Content Include="Main\CommonServices\DictionaryDescriptionService.js" />
+    <Content Include="Main\CommonServices\DictionaryService.js" />
+    <Content Include="Main\CommonServices\MaterialListItemService.js" />
+    <Content Include="Main\CommonServices\MaterialListPreparationService.js" />
+    <Content Include="Main\CommonServices\MaterialListService.js" />
+    <Content Include="Main\CommonServices\NewsLetterService.js" />
+    <Content Include="Main\CommonServices\ProductCategoryService.js" />
+    <Content Include="Main\CommonServices\QRService.js" />
+    <Content Include="Main\CommonServices\QuestionAndAnswerService.js" />
+    <Content Include="Main\CommonServices\QuestionCustomerService.js" />
+    <Content Include="Main\CommonServices\RelatedDefineDetailProductService.js" />
+    <Content Include="Main\CommonServices\SearchService.js" />
+    <Content Include="Main\CommonServices\SiteSettingService.js" />
+    <Content Include="Main\CommonServices\StateService.js" />
+    <Content Include="Main\CommonServices\SupplierService.js" />
+    <Content Include="Main\CommonServices\TechnicalPropertiesService.js" />
+    <Content Include="Main\CommonServices\TreeRulePropertyService.js" />
+    <Content Include="Main\CommonServices\UserSiteService.js" />
+    <Content Include="Main\CommonTemplates\SumicoContactUs.html" />
+    <Content Include="Main\CommonTemplates\SumicoProductMenu.html" />
+    <Content Include="Main\CompareDetail\CompareDetail.html" />
+    <Content Include="Main\Compare\Compare.html" />
+    <Content Include="Main\Default\Default.html" />
+    <Content Include="Main\DefineDetailProductLab\DefineDetailProductLab.html" />
+    <Content Include="Main\DefineDetailProduct\DefineDetailProduct.html" />
+    <Content Include="Main\DictionaryDescription\DictionaryDescription.html" />
+    <Content Include="Main\Guarantee\GuaranteeDescription.html" />
+    <Content Include="Main\LabProduct\LabProduct.html" />
+    <Content Include="Main\Layout\index.html" />
+    <Content Include="Main\Login\Login.html" />
+    <Content Include="Main\MasterProduct\MasterProduct.html" />
+    <Content Include="Main\MaterialListItem\MaterialListItem.html" />
+    <Content Include="Main\MaterialList\MaterialList.html" />
+    <Content Include="Main\ProductCategory\ProductCategory.html" />
+    <Content Include="Main\Routing.js" />
+    <Content Include="Main\SignIn\SignIn.html" />
+    <Content Include="Main\SignUp\SignUp.html" />
+    <Content Include="Main\Table\table.html" />
+    <Content Include="Main\UnderConstruction\UnderConstruction.html" />
+    <Content Include="packages.config" />
+    <Content Include="Fonts\B Mitra.ttf" />
+    <Content Include="Fonts\BKoodakBold.eot" />
+    <Content Include="Fonts\BKoodakBold.ttf" />
+    <Content Include="Fonts\BKoodakBold.woff" />
+    <Content Include="Fonts\BRoya.eot" />
+    <Content Include="Fonts\BRoya.ttf" />
+    <Content Include="Fonts\BRoya.woff" />
+    <Content Include="Fonts\BYekan.eot" />
+    <Content Include="Fonts\BYekan.ttf" />
+    <Content Include="Fonts\BYekan.woff" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Fonts\Iranian Sans.ttf" />
+    <Content Include="Fonts\IRANSansWeb_UltraLight.ttf" />
+    <Content Include="Fonts\myriad-set-pro_text.ttf" />
+    <Content Include="Fonts\WebMitra-Bold.woff" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\Scripts.zip" />
+    <Content Include="package.json" />
+    <Content Include="Fonts\IRANSans.ttf" />
+    <Content Include="Fonts\IRANSansWeb.ttf" />
+    <Content Include="Fonts\IRANSans_Bold.ttf" />
+    <Content Include="Fonts\SF-Pro-Text-Regular.otf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap-toggle.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="css\Mobile-bootstrap.min.css" />
+    <Content Include="css\MobileStyle.css" />
+    <Content Include="css\ngProgress.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\owl.transitions.css" />
+    <Content Include="css\SumicoStyle.css" />
+    <Content Include="Fonts\font-awesome.css" />
+    <Content Include="Fonts\font-awesome.min.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\AddToList.png" />
+    <Content Include="images\AddToListWhite.png" />
+    <Content Include="images\apple-touch-icon-114x114.png" />
+    <Content Include="images\apple-touch-icon-120x120.png" />
+    <Content Include="images\apple-touch-icon-144x144.png" />
+    <Content Include="images\apple-touch-icon-152x152.png" />
+    <Content Include="images\apple-touch-icon-57x57.png" />
+    <Content Include="images\apple-touch-icon-60x60.png" />
+    <Content Include="images\apple-touch-icon-72x72.png" />
+    <Content Include="images\apple-touch-icon-76x76.png" />
+    <Content Include="images\Articles.png" />
+    <Content Include="images\ArticlesBlue.png" />
+    <Content Include="images\backward.png" />
+    <Content Include="images\browse.png" />
+    <Content Include="images\Call.png" />
+    <Content Include="images\Catalog.png" />
+    <Content Include="images\CategoryLine.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\Comment.png" />
+    <Content Include="images\Compare.png" />
+    <Content Include="images\CompareButton.png" />
+    <Content Include="images\Contact.png" />
+    <Content Include="images\ContactBlue.png" />
+    <Content Include="images\CopyToClipboarad.png" />
+    <Content Include="images\del.png" />
+    <Content Include="images\docx.png" />
+    <Content Include="images\down.png" />
+    <Content Include="images\education.png" />
+    <Content Include="images\educationBlue.png" />
+    <Content Include="images\Email.png" />
+    <Content Include="images\eq.png" />
+    <Content Include="images\favicon-128.png" />
+    <Content Include="images\favicon-16x16.png" />
+    <Content Include="images\favicon-196x196.png" />
+    <Content Include="images\favicon-32x32.png" />
+    <Content Include="images\favicon-96x96.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\full color.png" />
+    <Content Include="images\FullScreen.png" />
+    <Content Include="images\gap-icon.png" />
+    <Content Include="images\header.png" />
+    <Content Include="images\header2.png" />
+    <Content Include="images\heart outline.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\instagram.png" />
+    <Content Include="images\job-icon.png" />
+    <Content Include="images\line.png" />
+    <Content Include="images\list.png" />
+    <Content Include="images\loader1.gif" />
+    <Content Include="images\MainIndex.png" />
+    <Content Include="images\Map.png" />
+    <Content Include="images\material.png" />
+    <Content Include="images\MaterialBlue.png" />
+    <Content Include="images\mobile-search.png" />
+    <Content Include="images\MobileArticle.png" />
+    <Content Include="images\MobileArticleBlue.png" />
+    <Content Include="images\MobileContact.png" />
+    <Content Include="images\MobileContactBlue.png" />
+    <Content Include="images\MobileIndex.png" />
+    <Content Include="images\MobileMaterial.png" />
+    <Content Include="images\MobileMaterialBlue.png" />
+    <Content Include="images\MobileProduct.png" />
+    <Content Include="images\MobileProductBlue.png" />
+    <Content Include="images\MobileTraining.png" />
+    <Content Include="images\MobileTrainingBlue.png" />
+    <Content Include="images\mstile-144x144.png" />
+    <Content Include="images\mstile-150x150.png" />
+    <Content Include="images\mstile-310x150.png" />
+    <Content Include="images\mstile-310x310.png" />
+    <Content Include="images\mstile-70x70.png" />
+    <Content Include="images\mul.png" />
+    <Content Include="images\News.png" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\Phone.png" />
+    <Content Include="images\product.png" />
+    <Content Include="images\ProductBlue.png" />
+    <Content Include="images\rar.png" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\RotatePhone.png" />
+    <Content Include="images\Search.png" />
+    <Content Include="images\SearchBoxBG.png" />
+    <Content Include="images\Share.png" />
+    <Content Include="images\soroosh-icon.png" />
+    <Content Include="images\t.jpg" />
+    <Content Include="images\TabIcon.png" />
+    <Content Include="images\TabIconSelected.png" />
+    <Content Include="images\telegram.png" />
+    <Content Include="images\training blue.222.png" />
+    <Content Include="images\up.png" />
+    <Content Include="images\UpArrow.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\UserIcon.png" />
+    <Content Include="images\view.png" />
+    <Content Include="images\vsd.png" />
+    <Content Include="images\vss.png" />
+    <Content Include="images\zip.png" />
+    <Content Include="Scripts\Alert.js" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-iran-national-id.min.js" />
+    <Content Include="Scripts\angular-page-loader.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-table-resize.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap-toggle.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\customSelect.js" />
+    <Content Include="Scripts\dirPagination.js" />
+    <Content Include="Scripts\dragscrollable.js" />
+    <Content Include="Scripts\ExtensionMethod.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-sortable.js" />
+    <Content Include="Scripts\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.nicescroll.js" />
+    <Content Include="Scripts\jquery.scrollTo.min.js" />
+    <Content Include="Scripts\jquery.zoom.js" />
+    <Content Include="Scripts\jquery.zoom.min.js" />
+    <Content Include="Scripts\jQueryRotate.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\ng-file-upload.js" />
+    <Content Include="Scripts\ng-sortable.js" />
+    <Content Include="Scripts\ngProgress.js" />
+    <Content Include="Scripts\ngStorage.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\simpleUpload.min.js" />
+    <Content Include="Scripts\Sortable.js" />
+    <Content Include="Scripts\tree.jquery.js" />
+    <Content Include="Scripts\xls.core.min.js" />
+    <Content Include="Scripts\xlsx.core.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Main\MaterialListDetail\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63025</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63025/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

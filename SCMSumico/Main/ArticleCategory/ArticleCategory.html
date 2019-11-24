@@ -1,0 +1,133 @@
+﻿<head>
+    <title>Article Category</title>
+</head>
+<div class="ArticleContainer" ng-controller="ArticleCategoryController">
+
+    <div class="Article-MenuBar-Wrapper">
+        <!-- Article MenuBar -->
+        <div class="Article-MenuBar">
+            <img id="LeftButton" onclick="LeftButton()" class="Article-MenuBar-Button Article-MenuBar-LeftButton EqIcon" src="../../images/eq.png" />
+            
+            <img id="RightButton" onclick="RightButton()" class="Article-MenuBar-Button Article-MenuBar-RightButton EqIcon" src="/../../images/eq.png" />
+        </div>
+
+        <!-- Dictionary Container Mobile Menu -->
+        <div class="DictionaryContainer-MobileMenu">
+            <div class="MobileMenu-DicTitle">{{Dictionaries.Title}}</div>
+            <div class="MobileMenu-DicAbastract">{{Dictionaries.Abstract}}</div>
+            <div class="MobileMenu-DicDescButton" onclick="ArticleCategoryDictionaryDescMobileButton()">بیشتر</div>
+            <div class="MobileMenu-DicDesc">{{Dictionaries.MetaDescription}}</div>
+            <div class="CloseSearchBox MobileMenu-MulCloseButton" onclick="MobileMenuMulCloseButton()">
+                <div class="times ArticleCategory-DictionaryContainer-times">×</div>
+                <span class="CloseSearchBoxText">Close</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Side Article List -->
+    <div class="LeftSideArticleList">
+        <!-- LeftSide Fixed Options -->
+        <div class="LeftSideArticleList-HeaderWrapper">
+            <div class="LeftSideArticleList-HeaderInner">
+                <a href="/#!/ArticleCategory" class="LeftSideArticleList-HeaderLink">
+                    <img class="LeftSideArticleList-HeaderLink-icon" src="../../images/writingaaa.png" />
+                    <div class="LeftSideArticleList-HeaderLink-desc">
+                        <span class="LeftSideArticleList-Header-LinkEn LeftSideArticleList-Header-LinkEnActive">Latest Articles</span>
+                        <span class="LeftSideArticleList-Header-LinkFa LeftSideArticleList-Header-LinkFaActive">آخرین مقالات</span>
+                    </div>
+                </a>
+                <a  class="LeftSideArticleList-HeaderLink">
+                    <img class="LeftSideArticleList-HeaderLink-icon" src="../../images/personaaa.png" />
+                    <div class="LeftSideArticleList-HeaderLink-desc">
+                        <span class="LeftSideArticleList-Header-LinkEn">For You</span>
+                        <span class="LeftSideArticleList-Header-LinkFa">برای شما</span>
+                    </div>
+                </a>
+                <a  class="LeftSideArticleList-HeaderLink">
+                    <img class="LeftSideArticleList-HeaderLink-icon" src="../../images/staraaa.png" />
+                    <div class="LeftSideArticleList-HeaderLink-desc">
+                        <span class="LeftSideArticleList-Header-LinkEn">Favorites</span>
+                        <span class="LeftSideArticleList-Header-LinkFa">علاقه مندی ها</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- LeftSide Links -->
+        <div class="LeftSideArticleList-BodyWrapper">
+            <div class="LeftSideArticleList-BodyScrolling">
+                <div class="LeftSideArticleList-BodyInner">
+                    <div ng-repeat="LeftArticleCatDetails in LeftContentCategories">
+                      <a ng-click="fillMiddle(LeftArticleCatDetails)" class="LeftSideArticleList-Body-Link">{{LeftArticleCatDetails.ContentCategoryName_Fa}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Article -->
+    <div class="MiddleContainer">
+
+        <!-- Middle Article List -->
+        <!--  onscroll="angular.element(this).scope().ScrollLazy(this)" -->
+        <div class="ArticleListContainer" style="position: relative;">
+            <div class="ArticleListContainer-Inner">
+                <h5 class="Float-Right Color-Black ContentTitle Font-Bold">
+                    {{MiddleContentCategories.ContentCategoryName_Fa || MiddleContentCategories[0].ContentCategoryName_Fa}}
+                </h5>
+                <div class="clearfix"></div>
+                <div class="TopArticleContent" ng-repeat="Article in LazyLoadingMiddle">
+                    <div class="imgTopArticleContent">
+                        <a href="/#!/Article/{{Article.IDX}}">
+                            <img ng-src="{{ServerUrl + Article.PicUrl}}" />
+                        </a>
+                    </div>
+                    <div class="TitleTopArticleContent">
+                        <a href="/#!/Article/{{Article.IDX}}">
+                            <span dir="rtl">{{Article.Name_Fa}}</span>
+                        </a>
+                        <div class="clearfix"></div>
+                        <div class="AbstractArticle">
+                            {{Article.Abstract_Fa}}
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="SocialFooter">
+                            <div class="LiKeDisLike">
+                                <img src="/images/full color.png" class="LikeIcon" /> {{Article.LikeCount}} Likes
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <img class="LazyLoadingMiddleGif" src="../../images/ArticleLazyLoadGif.gif" />
+            <img class="LazyLoadingMiddleGifMobile" src="../../images/ArticleLazyLoadGif.gif" />
+        </div>
+
+        <div class="ArticleContainer-HinderClicking" onclick="ArticleCategoryCloseAllMenus()"></div>
+    </div>
+
+    <!-- Right Side Article List -->
+    <div class="RightSideArticleList">
+        <div class="RightSideArticleHeader">مقالات منتخب</div>
+        <div class="clearfix"></div>
+        <div class="RightSideArticleContainer">
+            <!--<div class="RightSideArticleContainer-ContentOuter" ng-repeat="RightContentCategory in RightContentCategories">-->
+            <h4 class="Float-Right Color-Black ContentTitle Font-Bold RightSideArticleContainer-ContentOuter-title">{{RightContentCategories[0].ContentCategoryName_Fa}}</h4>
+            <!--<div ng-if="RightContentCategory.Content">-->
+            <div class="RightSideArticleContainer-ContentWrapper" ng-repeat="RightArticleCatDetails in LazyLoadingRight">
+                <div class="RightSideArticleContainer-ContentInner">
+                    <div class="RightSideArticleContainer-ArticleImg"><a href="/#!/Article/{{RightArticleCatDetails.IDX}}"><img src="{{ServerUrl + RightArticleCatDetails.PicUrl}}" /></a></div>
+                    <div class="RightSideArticleContainer-ArticleTitle">
+                        <a href="/#!/Article/{{RightArticleCatDetails.IDX}}"><span>{{RightArticleCatDetails.Abstract_Fa}}</span></a>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+</div>

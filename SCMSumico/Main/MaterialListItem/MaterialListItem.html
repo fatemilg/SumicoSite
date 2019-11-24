@@ -1,0 +1,112 @@
+﻿<head>
+    <title> جزئیات لیست تجهیزات</title>
+</head>
+<div ng-controller="MaterialListItemController">
+    <div class="TopMaterialListItem">
+        <div class="QuotationPartTotal">
+            <label class="lblEnTotalQuotation">Total quotation</label>
+            <div class="clearfix"></div>
+            <input type="text" class="input-control Align-Left inputTotalQuotation" placeholder="جمع کل پیشنهاد" onfocus="this.placeholder = ''" onblur="this.placeholder = 'جمع کل پیشنهاد'" />
+        </div>
+        <div class="QuotationPartName">
+            <label class="lblEnNameQuotation">Quotation name</label>
+            <div class="clearfix"></div>
+            <input type="text" class="input-control Align-Right inputNameQuotation" placeholder="نام لیست" onfocus="this.placeholder = ''" onblur="this.placeholder = 'نام لیست'" />
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="scrollBodyMaterialListItem">
+        <div class="divFunctionsMaterialListItem">
+            <input type="button" class="button-control btnFunctionsMaterialListItem" value="List of quotations" ng-click="LinkToMaterialList()" />
+            <input type="button" class="button-control btnFunctionsMaterialListItem" value="Complete order" ng-click="ShowModalCompleteOrder()" />
+
+            <div class="clearfix"></div>
+            <label class="lblChangeListFa">تغییر لیست</label>
+            <label class="lblChangeListFa">تکمیل سفارش</label>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="divMainMaterialListDetail" ng-repeat=" item in MaterialListItems">
+            <div class="divPictureDetail">
+                <div class="divCounterItems">{{$index+1}}</div>
+                <img src="{{ServerUrl + item.PicUrl}}" class="PicProductInMaterialList" />
+                <div class="clearfix"></div>
+                <div class="divRemoveItem">
+                    <input type="button" class="button-control btnRemoveItem" value="Remove" ng-click="DeleteMaterialListItem(item)" />
+                </div>
+                <br />
+            </div>
+            <div class="divContentDetail">
+                <h5 class="lblPartNumber">{{item.PartNumber}}</h5>
+                <h5 class="lblShortDescription">{{item.ShortTechnicalDescription}}</h5>
+                <br />
+                <h5 class="lblDescription">
+                    {{item.TechnicalDescription}}
+                </h5>
+
+                <div class="divCalculate">
+                    <div class="divQTY">
+                        <label class="lblQTY">QTY.</label>
+                        <div class="clearfix"></div>
+                        <input type="text" class="input-control Align-Left width100Percent" style="width:100%" placeholder="مقدار" onfocus="this.placeholder = ''" onblur="this.placeholder = 'مقدار'" />
+                    </div>
+                    <div class="divPer">
+                        <label class="lblPer">Per</label>
+                        <div class="clearfix"></div>
+                        <input type="text" class="input-control Align-Left width100Percent" style="width:100%" placeholder="واحد" onfocus="this.placeholder = ''" onblur="this.placeholder = 'واحد'" />
+                    </div>
+                    <div class="divUnitPrice">
+                        <label class="lblUnitPrice">Unit Price</label>
+                        <div class="clearfix"></div>
+                        <input type="text" class="input-control Align-Left width100Percent" style="width:100%" placeholder="قیمت واحد" onfocus="this.placeholder = ''" onblur="this.placeholder = 'قیمت واحد'" />
+                    </div>
+                    <div class="divTotalPrice">
+                        <label class="lblTotalPrice">Total Price</label>
+                        <div class="clearfix"></div>
+                        <input type="text" class="input-control Align-Left width100Percent " style="width:100%" placeholder="قیمت کل" onfocus="this.placeholder = ''" onblur="this.placeholder = 'قیمت کل'" />
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalSendOrders" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog positionModalDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <span class="modal-title">
+                         ارسال سفارش  به کارشناس فروش
+                    </span>
+                </div>
+                <section class="panel">
+                    <div class="panel-body">
+                        <form id="FormSendOrders" name="FormSendOrders">
+                            <div style="width:100%;float:right;direction:rtl">
+                                <input type="button" class="button-control btnChangeMaterialList" value="ارسال به فروشنده" ng-click="AddMaterialListPreparationByCustomer()" />
+                            </div>
+                            <div class="clearfix"></div>
+                            <div ng-repeat=" qu in QuestionCustomerForMaterialItem" style="width:33%;display:inline-block;float:right;direction:rtl">
+
+                                <lable class="QuestionTitle">{{qu.Question_Fa}} :</lable>
+                                <div class="clearfix"></div>
+                                <br />
+                                <select name="qu{{$index}}" ng-model="qu.IDOptionCustomerSelected" class="input-control Align-Right drpOptions" ng-options="x.IDOptionCustomer as x.Option_Fa for x in qu.OptionCustomer" required>
+                                    <option value="" selected="selected" label="انتخاب کنید"></option>
+                                </select>
+                            </div>
+
+                        </form>
+                        <div class="clearfix"></div><br />
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

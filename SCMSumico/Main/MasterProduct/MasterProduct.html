@@ -1,0 +1,69 @@
+﻿
+<div class="MasterProducts" data-ng-controller="MasterProductController">
+
+    <!-- Breadcrumb -->
+    <ul class="breadcrumb MasterProduct-breadCrumb">
+        <li class="breadcrumb-default">Product Category</li>
+        <!-- show all breadcrumbs with repeating -->
+        <li class="breadcrumb-category" ng-repeat="subCategory in BreadCrumbsData | orderBy:'id':true">
+            <a class="category-a" href="/#!/ProductCategory/{{IDXSupplier}}/{{subCategory.IDX}}">{{subCategory.Name_En}}</a>
+            <div class="category-samelevelcategories">
+                <!-- show every same level categories for each link -->
+                <div ng-repeat="sameLevels in subCategory.SameLevelCategories">
+                    <a class="category-samelevelcategories-a" href="/#!/ProductCategory/{{DefineDetailProducts[0].IDXSUpplier}}/{{sameLevels.IDX}}">{{sameLevels.Name_En}}</a>
+                </div>
+            </div>
+        </li>
+        <li>{{ DefineDetailProducts[0].Name_En}}</li>
+    </ul>
+    <!-- End Breadcrumb -->
+
+    <title>
+        {{ DefineDetailProducts[0].Name_Fa}} - {{ DefineDetailProducts[0].Name_En}}
+    </title>
+    <div class="MasterProductHeader">
+        <img ng-src="{{ServerUrl + DefineDetailProducts[0].MenuPicUrl}}" class="SupplierLogoImg" />
+        <div class="clearfix"></div>
+        <div class="TitleHeader">
+            <div class="MasterIcon">
+                <img ng-src="{{ServerUrl + DefineDetailProducts[0].ProductUrl}}" />
+            </div>
+            <table class="HeaderTable">
+                <tr style="border-bottom:solid 1px #d5d5d5"><td style="color:#fff; direction:ltr;text-align:left;padding: 2px 100px 2px 0px;">{{ DefineDetailProducts[0].Name_En}}</td></tr>
+                <tr><td style="color:#fff;direction:rtl;text-align:right;padding:2px">{{ DefineDetailProducts[0].Name_Fa}}</td></tr>
+            </table>
+        </div>
+        <div class="clearfix"></div>
+        <div style="width:65%;min-height:100px; border:solid 1px #ccc;display:inline-block;margin:20px 0 20px 0;display:none">
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="PropertyDefineDetails" data-ng-repeat="DefineDetailProduct in DefineDetailProducts[0].Property">
+        <section class="BasePropertyOfProduct">
+            <span class="Color-Yellow">{{DefineDetailProduct.Name_En}}</span>
+        </section>
+        <div style="padding:0 35px 30px 15px">
+            <section id="MasterProduct" data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: false, rewindNav : false,itemsMobile: [768,2],itemsTablet: [1024,6],itemsDesktop : [3000,6]}">
+                <div data-owl-carousel-item data-ng-repeat="SubDefineDetailProduct in DefineDetailProduct.DefineDetails" class="item DefineDetailProductsInMasterPageRole">
+                    <a href="#!/DefineDetailProduct/{{SubDefineDetailProduct.IDX}}">
+                        <img ng-src="{{ServerUrl + SubDefineDetailProduct.PicUrl}}" style="width: 100%;" class="MasterDefineImage{{SubDefineDetailProduct.IDX}}">
+                        <div style="width:70%;margin-top:5px; float:left">
+                            <span class="UnderSpotPartNumber">{{SubDefineDetailProduct.PartNumber}}</span>
+                            <div class="clearfix"></div>
+                            <span class="UnderSpotPartIndex">{{SubDefineDetailProduct.IndexDescriptionText}}</span>
+                        </div>
+                    </a>
+                    <div style="width:30%;margin-top:5px; float:left;">
+                        <!--<img ng-src="{{ServerUrl +SubDefineDetailProduct.IndexDescriptionPicUrl}}" style="width:7px; height:37px;float:right;display:inline-block;border: 1px solid #333333;" />-->
+                        <div style="float:right;">
+                            <img src="/images/AddToListWhite.png" class="AddToListButton" data-placement="left" tooltip title="Add to List" ng-click="AddToMaterialList(SubDefineDetailProduct.IDDefineDetailProduct)" />
+                            <div class="clearfix"></div>
+                            <img src="/images/Compare.png" class="CompareButton" data-placement="left" tooltip title="Compare" ng-click="AddToCompareList(SubDefineDetailProduct.IDDefineDetailProduct,'MasterDefineImage'+SubDefineDetailProduct.IDX)" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

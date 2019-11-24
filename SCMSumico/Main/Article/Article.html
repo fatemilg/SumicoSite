@@ -1,0 +1,78 @@
+﻿<!-- Article Wrapper -->
+<div class="ArticlePage" ng-controller="ArticleController">
+    <!-- Article Images -->
+    <img ng-src="{{CurrentUrlQRCode}}" class="QRCode ArticlePage-QRCode" />
+    <span class="ArticlePage-QRCodeDesc">!در موبایل یا تبلت بخوانید</span>
+    <div class="clearfix"></div>
+    <img class="ArticleBigImage" ng-src="{{ServerUrl + Article.PicUrl}}" />
+    <!-- Article Head -->
+    <title>{{Article.Name_Fa}}</title>
+    <h4 class="ArticleTitle">{{Article.Name_Fa}}</h4>
+    <div class="clearfix"></div>
+    <!-- Article Icon Container -->
+    <div class="IconContainar">
+        <a ng-click="LikeContent(Article.IDContent)" class="LikeIcon">
+            <img id="HeartIcon" src="/images/heart outline2.png" class="RealationalIcon" />
+            <div class="clearfix"></div>
+            <b>{{Article.LikeCount}}</b><br /> Likes
+        </a>
+        <a ng-click="GoToComment()" class="CommentIcon">
+            <img src="/images/comment2.png" class="RealationalIcon" />
+            <div class="clearfix"></div>
+            <b>{{Comments.length}}</b><br /> Comments
+        </a>
+    </div>
+    <hr style="margin:10px 0 15px 0; width: 100%" />
+    <!-- Article Desvription -->
+    <div class="ArticleDescription_Fa" ng-bind-html="Article.Description_Fa"></div>
+    <hr style="margin:10px 0 3px 0" />
+
+    <!-- Article Comment Form Wrapper -->
+    <div id="CommentForm" class="CommentForm">
+
+        <!-- commnets -->
+        <div class="article-comments-wrapper" ng-repeat="Comment in Comments">
+            <div class="CommenyAuthor">
+                <img src="/images/user.png" />
+                {{Comment.FullName}}
+            </div>
+            <div class="CommentBox"> {{Comment.Comment}}</div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- form -->
+        <form name="FormComment" novalidate id="FormComment">
+            <div class="form-group margin-bottom">
+                <label class="control-label">نام:</label><br />
+                <input id="txtContatctFName" type="text" class="form-control" ng-model="CurrentComment.SenderFName" placeholder="نام" name="txtContatctFName" required />
+                <span ng-hide="FormComment.txtContatctFName.$valid || FormComment.txtContatctFName.$pristine" class="txtValidation"> نام را وارد کنید</span>
+            </div>
+            <div class="form-group margin-bottom">
+                <label class="control-label">نام خانوادگی:</label><br />
+                <input id="txtContatctLName" type="text" class="form-control" ng-model="CurrentComment.SenderLName" placeholder="نام خانوادگی" name="txtContatctLName" required />
+                <span ng-hide="FormComment.txtContatctLName.$valid || FormComment.txtContatctLName.$pristine" class="txtValidation"> نام خانوادگی را وارد کنید</span>
+            </div>
+            <div class="form-group margin-bottom">
+                <label class="control-label">پست الکترونیک:</label><br />
+                <input id="txtContatctEmail" type="email" class="form-control Align-Left" ng-model="CurrentComment.SenderEmail" placeholder="Email" name="txtContatctEmail" required />
+                <span ng-hide="FormComment.txtContatctEmail.$valid || FormComment.txtContatctEmail.$pristine" class="txtValidation"> پست الکترونیک  را درفرمت صحیح وارد کنید</span>
+            </div>
+            <div class="form-group margin-bottom">
+                <label class="control-label">پیام:</label><br />
+                <textarea id="txtContatctComment" type="text" class="form-control" ng-model="CurrentComment.Comment" placeholder="متن کامنت" name="txtContatctComment" required></textarea>
+                <span ng-hide="FormComment.txtContatctComment.$valid || FormComment.txtContatctComment.$pristine" class="txtValidation">  پیام را وارد کنید</span>
+            </div>
+            <div class="form-group margin-bottom">
+                <label class="control-label">لطفا متن روبرو را وارد کنید:</label>
+                <img id="imgCaptcha" /><i class="fa fa-refresh" style="float:left;margin:10px 0 0 10px;" ng-click="GetCaptcha()"></i>
+                <input type="text" id="txtCamptcha" class="form-control Align-Left" ng-model="CurrentComment.CaptchaText" name="txtCamptcha" required />
+                <span ng-hide="FormComment.txtCamptcha.$valid || FormComment.txtCamptcha.$pristine" class="txtValidation"> متن روبرو را وارد کنید</span>
+            </div>
+            <div class="form-group margin-bottom col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <input type="button" class="btn btn-primary Align-Center Full-Width" value="ثبت" ng-click="AddComment()" ng-disabled="FormComment.$invalid" />
+            </div>
+            <div class="clearfix"></div>
+        </form>
+
+    </div>
+</div>
