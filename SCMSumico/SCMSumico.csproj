@@ -410,7 +410,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main\MaterialListDetail\" />
-    <Folder Include="xxx\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
