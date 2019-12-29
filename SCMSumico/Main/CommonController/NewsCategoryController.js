@@ -1,4 +1,4 @@
-﻿myApp.controller('ArticleCategoryController', ['$scope', 'DictionaryServices', 'ContentModuleRetService', 'ngProgress', '$routeParams',
+﻿myApp.controller('NewsCategoryController', ['$scope', 'DictionaryServices', 'ContentModuleRetService', 'ngProgress', '$routeParams',
     function ($scope, DictionaryServices, ContentModuleRetService, ngProgress, $routeParams) {
 
         $('body, html').animate({
@@ -8,7 +8,7 @@
         /* Getting RightArticleCategory Data */
         $scope.GetRightContentCategories = function () {
             var objContentModuleRet = {
-                UniqueName: 'RightArticleCategory'
+                UniqueName: 'News_Right'
             };
             ContentModuleRetService.GetContentModuleByUniqueName(objContentModuleRet).then(function (result) {
                 $scope.RightContentCategories = result.data;
@@ -20,7 +20,7 @@
         /* Getting LeftArticleCategory Data */
         $scope.GetLeftContentCategories = function () {
             var objContentModuleRet = {
-                UniqueName: 'LeftArticleCategory'
+                UniqueName: 'News_Left'
             };
             ContentModuleRetService.GetContentModuleByUniqueName(objContentModuleRet).then(function (result) {
                 $scope.LeftContentCategories = result.data;
@@ -44,7 +44,7 @@
         /* Getting MiddleArticleCategory Data */
         $scope.GetMiddleContentCategories = function () {
             var objContentModuleRet = {
-                UniqueName: 'MiddleArticleCategory'
+                UniqueName: 'News_Middle'
             };
             //ngProgress.start();
             ContentModuleRetService.GetContentModuleByUniqueName(objContentModuleRet).then(function (result) {
@@ -83,10 +83,10 @@
             }
             /* If data has loaded form one of the links in left-side */
             else if (!$scope.MiddleContentCategories.length && $scope.MiddleContentCategories.Content) {  //
-                for (var countContent = 0; countContent < $scope.MiddleContentCategories.Content.length; countContent++) {
-                    $scope.MiddleTempLazyLoad.push($scope.MiddleContentCategories.Content[countContent]);
+                for (var z = 0; z < $scope.MiddleContentCategories.Content.length; z++) {
+                    $scope.MiddleTempLazyLoad.push($scope.MiddleContentCategories.Content[z]);
                     if ($scope.MiddleTempLazyLoad.length <= 5) {
-                        $scope.LazyLoadingMiddle.push($scope.MiddleContentCategories.Content[countContent]);
+                        $scope.LazyLoadingMiddle.push($scope.MiddleContentCategories.Content[z]);
                     };
                 };
             }
@@ -175,7 +175,7 @@
             ArticleCategoryFillMiddleAnimationsOnMobile();  // JQuery effects and animations
             /*  */
             $routeParams.IDX = CurrentCategory.ContentCategoryIDX;
-            window.location.href = "/#!/ArticleCategory/" + $routeParams.IDX;
+            window.location.href = "/#!/NewsCategory/" + $routeParams.IDX;
         };
 
         /* Call services */

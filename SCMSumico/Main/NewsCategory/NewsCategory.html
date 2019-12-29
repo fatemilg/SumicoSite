@@ -1,13 +1,13 @@
 ﻿<head>
     <title>مقالات</title>
 </head>
-<div class="ArticleContainer" ng-controller="ArticleCategoryController">
+<div class="ArticleContainer" ng-controller="NewsCategoryController">
 
     <div class="Article-MenuBar-Wrapper">
         <!-- Article MenuBar -->
         <div class="Article-MenuBar">
             <img id="LeftButton" onclick="LeftButton()" class="Article-MenuBar-Button Article-MenuBar-LeftButton EqIcon" src="../../images/eq.png" />
-            
+
             <img id="RightButton" onclick="RightButton()" class="Article-MenuBar-Button Article-MenuBar-RightButton EqIcon" src="/../../images/eq.png" />
         </div>
 
@@ -26,7 +26,7 @@
 
     <!-- Left Side Article List -->
     <div class="LeftSideArticleList">
-        <div class="LeftSideArticleHeader">گروه مقالات</div>
+        <div class="LeftSideArticleHeader">دسته بندی</div>
         <div class="clearfix"></div>
         <div class="LeftSideArticleList-BodyWrapper">
             <div class="LeftSideArticleList-BodyScrolling">
@@ -83,7 +83,7 @@
 
     <!-- Right Side Article List -->
     <div class="RightSideArticleList">
-        <div class="RightSideArticleHeader">مقالات منتخب</div>
+        <div class="RightSideArticleHeader">اخبار منتخب</div>
         <div class="clearfix"></div>
         <div class="RightSideArticleContainer">
             <div class="RightSideArticleContainer-ContentWrapper" ng-repeat="RightArticleCatDetails in LazyLoadingRight">

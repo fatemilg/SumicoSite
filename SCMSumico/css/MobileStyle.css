@@ -3713,7 +3713,7 @@ html, body {
         /*height: 550px;*/
         overflow-y: scroll;
         direction: rtl;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     /* Left Side Article List in Article Category Pages - Desktop Size */
@@ -3723,7 +3723,7 @@ html, body {
         width: 25%;
         display: inline-block;
         float: left;
-        margin-top: 90px;
+        margin-top: 17px;
         position: relative;
     }
 
@@ -3786,7 +3786,7 @@ html, body {
 
     .LeftSideArticleList-BodyScrolling {
         /*max-height: 200px;*/
-        overflow-y: scroll;
+        /*overflow-y: scroll;*/
     }
 
     .LeftSideArticleList-Body-Link {
@@ -3807,7 +3807,7 @@ html, body {
         display: inline-block;
         float: left;
         float: right;
-        padding-left: 27px;
+        padding-left: 7px;
     }
 
         .RightSideArticleList .RightSideArticleContainer {
@@ -3828,7 +3828,6 @@ html, body {
         display: inline-block;
         float: right;
         background-color: #81b7cc;
-        border-radius: 5px 0 0 5px;
         padding: 15px 10px 15px 10px;
         margin-top: 15px;
     }
@@ -10172,11 +10171,16 @@ html, body {
         z-index: 10000;
         transition: 0.5s;
         overflow: hidden;
+
     }
 
-        .LeftSideArticleList span {
-            color: #fff;
+        .LeftSideArticleList .LeftSideArticleHeader {
+            display:none;
         }
+
+    .LeftSideArticleList span {
+        color: #fff;
+    }
 
         .LeftSideArticleList a {
             color: #fff !important;
@@ -10227,8 +10231,7 @@ html, body {
     }
 
     .LeftSideArticleList-BodyWrapper {
-        padding: 0px 50px;
-        padding-top: 30px;
+        padding: 12px 17px;
     }
 
     .LeftSideArticleList-BodyScrolling {

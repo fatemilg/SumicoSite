@@ -658,10 +658,18 @@ input[type="button"] {
     .LeftSideArticleList {
         width: 20%;
     }
+        .LeftSideArticleList .LeftSideArticleHeader {
+            background-color: #334a9b;
+            color: #fff;
+            width: 100%;
+            display: inline-block;
+            padding: 15px 10px 15px 10px;
+            margin-top:-2px;
+        }
 
-    .LeftSideArticleList-BodyWrapper {
-        padding: 30px 35px 0px 35px;
-    }
+        .LeftSideArticleList-BodyWrapper {
+            padding: 21px 6px 0px 35px;
+        }
 
     .LeftSideArticleList-HeaderWrapper {
         padding: 0px 35px;

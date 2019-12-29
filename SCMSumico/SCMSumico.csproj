@@ -137,6 +137,7 @@
     <Content Include="Main\CommonController\MasterProductController.js" />
     <Content Include="Main\CommonController\MaterialListController.js" />
     <Content Include="Main\CommonController\MaterialListItemController.js" />
+    <Content Include="Main\CommonController\NewsCategoryController.js" />
     <Content Include="Main\CommonController\ProductCategoryController.js" />
     <Content Include="Main\CommonController\SearchController.js" />
     <Content Include="Main\CommonController\SideUserMenuController.js" />
@@ -198,6 +199,7 @@
     <Content Include="Main\MasterProduct\MasterProduct.html" />
     <Content Include="Main\MaterialListItem\MaterialListItem.html" />
     <Content Include="Main\MaterialList\MaterialList.html" />
+    <Content Include="Main\NewsCategory\NewsCategory.html" />
     <Content Include="Main\ProductCategory\ProductCategory.html" />
     <Content Include="Main\Routing.js" />
     <Content Include="Main\SignIn\SignIn.html" />
@@ -410,7 +412,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main\MaterialListDetail\" />
-    <Folder Include="zzzzz\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
