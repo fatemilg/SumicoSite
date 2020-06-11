@@ -5,13 +5,22 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
     $routeProvider
         .when('/Default',
             {
-                templateUrl: '/Main/Default/Default.html?v=9.3',
+                templateUrl: '/Main/Default/Default.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Default');
                     }]
                 }
             })
+        .when('/HR', {
+            templateUrl: '/Main/ApplicationForm/ApplicationForm.html',
+            controller: "ApplicationFormController",
+            resolve: {
+                init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
+                    AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'ApplicationForm');
+                }]
+            }
+        })
         .when('/Login', {
             templateUrl: '/Main/Login/Login.html',
             controller: "LoginController",
@@ -23,7 +32,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
         })
         .when('/ProductCategory/:IDXSupplier/:IDXParentProductCategory',
             {
-                templateUrl: '/Main/ProductCategory/ProductCategory.html?v=9.3',
+                templateUrl: '/Main/ProductCategory/ProductCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'ProductCategory', $route.current.params.IDXSupplier);
@@ -33,7 +42,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/ProductCategory/:IDXSupplier/:IDXParentProductCategory/:Description',//SEO
             {
-                templateUrl: '/Main/ProductCategory/ProductCategory.html?v=9.3',
+                templateUrl: '/Main/ProductCategory/ProductCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'ProductCategory', $route.current.params.IDXSupplier);
@@ -43,7 +52,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/MasterProduct/:IDXProduct',
             {
-                templateUrl: '/Main/MasterProduct/MasterProduct.html?v=9.3',
+                templateUrl: '/Main/MasterProduct/MasterProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'MasterProduct', $route.current.params.IDXProduct);
@@ -53,7 +62,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/MasterProduct/:IDXProduct/:Description',//SEO
             {
-                templateUrl: '/Main/MasterProduct/MasterProduct.html?v=9.3',
+                templateUrl: '/Main/MasterProduct/MasterProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'MasterProduct', $route.current.params.IDXProduct);
@@ -63,7 +72,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/DefineDetailProduct/:IDX',
             {
-                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.3',
+                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'DefineDetailProduct', $route.current.params.IDX);
@@ -73,7 +82,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/DefineDetailProduct/:IDX/:Meter',
             {
-                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.3',
+                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'DefineDetailProduct', $route.current.params.IDX);
@@ -83,7 +92,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/DefineDetailProduct/:IDX/:Meter/:Description',//SEO
             {
-                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.3',
+                templateUrl: '/Main/DefineDetailProduct/DefineDetailProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'DefineDetailProduct', $route.current.params.IDX);
@@ -93,7 +102,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/DefineDetailProductLab/:IDX/:Meter/:Description',//SEO
             {
-                templateUrl: '/Main/DefineDetailProductLab/DefineDetailProductLab.html?v=9.3',
+                templateUrl: '/Main/DefineDetailProductLab/DefineDetailProductLab.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'DefineDetailProductLab', $route.current.params.IDX);
@@ -103,7 +112,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/ArticleCategory',
             {
-                templateUrl: '/Main/ArticleCategory/ArticleCategory.html?v=9.3',
+                templateUrl: '/Main/ArticleCategory/ArticleCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'ArticleCategory');
@@ -113,7 +122,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/ArticleCategory/:IDX',
             {
-                templateUrl: '/Main/ArticleCategory/ArticleCategory.html?v=9.3',
+                templateUrl: '/Main/ArticleCategory/ArticleCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'ArticleCategory', $route.current.params.IDX);
@@ -123,7 +132,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Article/:IDX',
             {
-                templateUrl: '/Main/Article/Article.html?v=9.3',
+                templateUrl: '/Main/Article/Article.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Article', $route.current.params.IDX);
@@ -133,7 +142,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Article/:IDX/:Description',//SEO
             {
-                templateUrl: '/Main/Article/Article.html?v=9.3',
+                templateUrl: '/Main/Article/Article.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Article', $route.current.params.IDX);
@@ -143,7 +152,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/NewsCategory',
             {
-                templateUrl: '/Main/NewsCategory/NewsCategory.html?v=9.3',
+                templateUrl: '/Main/NewsCategory/NewsCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'NewsCategory');
@@ -153,7 +162,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/NewsCategory/:IDX',
             {
-                templateUrl: '/Main/NewsCategory/NewsCategory.html?v=9.3',
+                templateUrl: '/Main/NewsCategory/NewsCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'NewsCategory', $route.current.params.IDX);
@@ -163,7 +172,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         //.when('/SignIn',
         //{
-        //    templateUrl: '/Main/SignIn/SignIn.html?v=9.3',
+        //    templateUrl: '/Main/SignIn/SignIn.html?v=9.7',
         //    resolve: {
         //init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
         //    AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Article', $route.current.params.IDX);
@@ -173,7 +182,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
         //})
         .when('/SignUp',
             {
-                templateUrl: '/Main/SignUp/SignUp.html?v=9.3',
+                templateUrl: '/Main/SignUp/SignUp.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'SignUp');
@@ -182,7 +191,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Compare',
             {
-                templateUrl: '/Main/Compare/Compare.html?v=9.3',
+                templateUrl: '/Main/Compare/Compare.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Compare');
@@ -192,7 +201,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/CompareDetail/:CompareListIDX',
             {
-                templateUrl: '/Main/CompareDetail/CompareDetail.html?v=9.3',
+                templateUrl: '/Main/CompareDetail/CompareDetail.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'CompareDetail');
@@ -202,7 +211,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/LabProduct/:IDXSupplier/:IDR',
             {
-                templateUrl: '/Main/LabProduct/LabProduct.html?v=9.3',
+                templateUrl: '/Main/LabProduct/LabProduct.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'LabProduct', $route.current.params.IDXSupplier);
@@ -212,7 +221,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Guarantee',
             {
-                templateUrl: 'Main/Guarantee/GuaranteeDescription.html?v=9.3',
+                templateUrl: 'Main/Guarantee/GuaranteeDescription.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Guarantee');
@@ -222,7 +231,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/UnderConstruction',
             {
-                templateUrl: 'Main/UnderConstruction/UnderConstruction.html?v=9.3',
+                templateUrl: 'Main/UnderConstruction/UnderConstruction.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'UnderConstruction');
@@ -232,7 +241,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/AboutUs',
             {
-                templateUrl: 'Main/AboutUs/AboutUs.html?v=9.3',
+                templateUrl: 'Main/AboutUs/AboutUs.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'AboutUs');
@@ -242,7 +251,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/DictionaryDescription/:IDX',
             {
-                templateUrl: 'Main/DictionaryDescription/DictionaryDescription.html?v=9.3',
+                templateUrl: 'Main/DictionaryDescription/DictionaryDescription.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'DictionaryDescription', $route.current.params.IDX);
@@ -252,7 +261,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/AboutUsCategory',
             {
-                templateUrl: 'Main/AboutUsCategory/AboutUsCategory.html?v=9.3',
+                templateUrl: 'Main/AboutUsCategory/AboutUsCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'AboutUsCategory');
@@ -262,7 +271,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/AboutUsNewsAndEvents',
             {
-                templateUrl: 'Main/AboutUsNewsAndEvents/AboutUsNewsAndEvents.html?v=9.3',
+                templateUrl: 'Main/AboutUsNewsAndEvents/AboutUsNewsAndEvents.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'AboutUsNewsAndEvents');
@@ -272,7 +281,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/AboutUsNewsLetter',
             {
-                templateUrl: 'Main/AboutUsNewsLetter/AboutUsNewsLetter.html?v=9.3',
+                templateUrl: 'Main/AboutUsNewsLetter/AboutUsNewsLetter.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'AboutUsNewsLetter');
@@ -282,7 +291,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Incident/:IDX',
             {
-                templateUrl: 'Main/Incident/Incident.html?v=9.3',
+                templateUrl: 'Main/Incident/Incident.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Incident', $route.current.params.IDX);
@@ -292,7 +301,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/IncidentCategory',
             {
-                templateUrl: 'Main/IncidentCategory/IncidentCategory.html?v=9.3',
+                templateUrl: 'Main/IncidentCategory/IncidentCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'IncidentCategory');
@@ -302,7 +311,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingMain',
             {
-                templateUrl: 'Main/TrainingMain/TrainingMain.html?v=9.3',
+                templateUrl: 'Main/TrainingMain/TrainingMain.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingMain');
@@ -312,7 +321,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCoursesHeld',
             {
-                templateUrl: 'Main/TrainingCoursesHeld/TrainingCoursesHeld.html?v=9.3',
+                templateUrl: 'Main/TrainingCoursesHeld/TrainingCoursesHeld.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCoursesHeld');
@@ -322,7 +331,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCoursesHeld/:IDX',
             {
-                templateUrl: 'Main/TrainingCoursesHeld/TrainingCoursesHeld.html?v=9.3',
+                templateUrl: 'Main/TrainingCoursesHeld/TrainingCoursesHeld.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCoursesHeld', $route.current.params.IDX);
@@ -332,7 +341,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCourses',
             {
-                templateUrl: 'Main/TrainingCourses/TrainingCourses.html?v=9.3',
+                templateUrl: 'Main/TrainingCourses/TrainingCourses.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCourses');
@@ -342,7 +351,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCourses/:IDX',
             {
-                templateUrl: 'Main/TrainingCourses/TrainingCourses.html?v=9.3',
+                templateUrl: 'Main/TrainingCourses/TrainingCourses.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCourses', $route.current.params.IDX);
@@ -352,7 +361,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingParticipantCV/:IDX',
             {
-                templateUrl: 'Main/TrainingParticipantCV/TrainingParticipantCV.html?v=9.3',
+                templateUrl: 'Main/TrainingParticipantCV/TrainingParticipantCV.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingParticipantCV', $route.current.params.IDX);
@@ -362,7 +371,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCoursesCompanyCategory',
             {
-                templateUrl: 'Main/TrainingCoursesCompanyCategory/TrainingCoursesCompanyCategory.html?v=9.3',
+                templateUrl: 'Main/TrainingCoursesCompanyCategory/TrainingCoursesCompanyCategory.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCoursesCompanyCategory');
@@ -372,7 +381,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/TrainingCoursesCompanyDetail/:IDX',
             {
-                templateUrl: 'Main/TrainingCoursesCompanyDetail/TrainingCoursesCompanyDetail.html?v=9.3',
+                templateUrl: 'Main/TrainingCoursesCompanyDetail/TrainingCoursesCompanyDetail.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'TrainingCoursesCompanyDetail', $route.current.params.IDX);
@@ -382,7 +391,7 @@ myApp.config(function ($routeProvider, $locationProvider, $httpProvider, $cookie
             })
         .when('/Form/:IDX',
             {
-                templateUrl: 'Main/Form/Form.html?v=9.3',
+                templateUrl: 'Main/Form/Form.html?v=9.7',
                 resolve: {
                     init: ['$route', '$cookies', '$rootScope', 'SiteVisitService', function ($route, $cookies, $rootScope, SiteVisitService) {
                         AddSiteVisit(SiteVisitService, $cookies, $rootScope, 'Form', $route.current.params.IDX);
@@ -399,6 +408,7 @@ myApp.run(function ($rootScope) {
         $rootScope.ServerUrl = 'http://Sumico.ir/';
         //192.168.10.15:2015/
         //http://+localhost:2018/
+        //ttp://Sumico.ir/
     }
     else {
         $rootScope.ServerUrl = 'http://Sumico.ir/';

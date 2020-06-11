@@ -71,6 +71,7 @@
     <Content Include="gulpfile.js" />
     <Content Include="images\AbouUS.png" />
     <Content Include="images\Aparat.png" />
+    <Content Include="images\ApplicationFormIcon.png" />
     <Content Include="images\BackButton.jpg" />
     <Content Include="images\DefaultPageDesktopBanner.jpg" />
     <Content Include="images\DefaultPageDesktopBanner.png" />
@@ -116,9 +117,11 @@
     <Content Include="images\SumicoUserIcon.png" />
     <Content Include="images\writingaaa.png" />
     <Content Include="Main\AboutUs\AboutUs.html" />
+    <Content Include="Main\ApplicationForm\ApplicationForm.html" />
     <Content Include="Main\ArticleCategory\ArticleCategory.html" />
     <Content Include="Main\Article\Article.html" />
     <Content Include="Main\CommonController\AboutUsController.js" />
+    <Content Include="Main\CommonController\ApplicationFormController.js" />
     <Content Include="Main\CommonController\ArticleCategoryController.js" />
     <Content Include="Main\CommonController\ArticleController.js" />
     <Content Include="Main\CommonController\CatalogController.js" />
@@ -156,6 +159,7 @@
     <Content Include="Main\CommonDirectives\TypePersianDirective.js" />
     <Content Include="Main\CommonFactories\DefineDetailFactory.js" />
     <Content Include="Main\CommonServices\AccessoryProductService.js" />
+    <Content Include="Main\CommonServices\ApplicationFormService.js" />
     <Content Include="Main\CommonServices\AttachInterfaceCategoryService.js" />
     <Content Include="Main\CommonServices\BannerService.js" />
     <Content Include="Main\CommonServices\CaptchaService.js" />

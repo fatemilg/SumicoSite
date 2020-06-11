@@ -1093,10 +1093,12 @@ input[type="button"] {
 
     /* Sumico Services Image - Mobile Size */
     /* ----------------------------------- */
-    .TrainingIcon {
-        content: url(../images/FooterServicesMobile.png);
+    .ServiceCenter {
+        content: url(../images/SumicoServiceCenterIcon.png);
     }
-
+    .ApplicationForm {
+        content: url(../images/ApplicationFormIcon.png);
+    }
     /* Sumico CompareDetails Table - Mobile Size */
     /* ----------------------------------------- */
     .grid-comparetable {
@@ -1265,8 +1267,11 @@ input[type="button"] {
         content: url(/images/SumicoContactIcon.png);
     }
 
-    .TrainingIcon {
+    .ServiceCenter {
         content: url(/images/SumicoServiceCenterIcon.png);
+    }
+    .ApplicationForm {
+        content: url(/images/ApplicationFormIcon.png);
     }
 
     .RahkarhaIcon {

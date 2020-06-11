@@ -1,0 +1,164 @@
+﻿
+<head>
+    <title>
+        فرم همکاری
+    </title>
+</head>
+
+<div ng-controller="ApplicationFormController" class="divApplicationForm">
+    <div class="ApplicationFormContainer">
+        <div class="ApplicationFormSection">
+            <div id="divApplicationForm" class="divApplicationForm">
+                <form id="FormRegisterApplication" name="FormRegisterApplication" novalidate>
+                    <h5 style="float:right;direction:rtl"> لطفا فرم زیر را لطفا با دقت وارد کنید!</h5>
+                    <div class="clearfix"></div>
+                    <div>
+                        <lable>نوع همکاری :</lable>
+                        <div class="clearfix"></div>
+                        <select name="TypeApplicationForm" ng-model="ApplicationForm.IDApplicationFormType" class="input-control Align-Right" ng-options="x.IDApplicationFormType as x.Title for x in ApplicationFormTypes" required>
+                        </select>
+                    </div>
+                    <div>
+                        <lable>نام :</lable>
+                        <div class="clearfix"></div>
+                        <input name="FName" type="text" class="input-control Align-Right" ng-model="ApplicationForm.FName" maxlength="50" descriptionpattern required />
+                        <span  ng-if="(FormRegisterApplication.FName.$dirty || submitted) && FormRegisterApplication.FName.$error.required" class="txtValidation Align-Right validation-application-form"> نام را وارد کنید!</span>
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <div>
+                        <lable>نام خانوادگی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="LName" type="text" class="input-control Align-Right" ng-model="ApplicationForm.LName" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.LName.$dirty || submitted) && FormRegisterApplication.LName.$error.required" class="txtValidation Align-Right validation-application-form"> نام خانوادگی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> محل تولد :</lable>
+                        <div class="clearfix"></div>
+                        <input name="BirthCity" type="text" class="input-control Align-Right" ng-model="ApplicationForm.BirthCity" maxlength="50" descriptionpattern />
+                        <span ng-if="(FormRegisterApplication.BirthCity.$dirty || submitted) && FormRegisterApplication.BirthCity.$error.required" class="txtValidation Align-Right validation-application-form">  محل تولد را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable>سال تولد (مثال- 1367) :</lable>
+                        <div class="clearfix"></div>
+                        <input name="BirthYear" type="text" class="input-control Align-Left" ng-model="ApplicationForm.BirthYear" numbers-only maxlength="4" required />
+                        <span ng-if="(FormRegisterApplication.BirthYear.$dirty || submitted) && FormRegisterApplication.BirthYear.$error.required" class="txtValidation Align-Right validation-application-form">  سال تولد را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> شغل پدر :</lable>
+                        <div class="clearfix"></div>
+                        <input name="FatherJob" type="text" class="input-control Align-Left" ng-model="ApplicationForm.FatherJob" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.FatherJob.$dirty || submitted) && FormRegisterApplication.FatherJob.$error.required" class="txtValidation Align-Right validation-application-form">  شغل پدر را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> مقطع تحصیلی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="Grade" type="text" class="input-control Align-Left" ng-model="ApplicationForm.Grade" maxlength="5" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.Grade.$dirty || submitted) && FormRegisterApplication.Grade.$error.required" class="txtValidation Align-Right validation-application-form">  مقطع تحصیلی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> رشته تحصیلی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="FieldStudy" type="text" class="input-control Align-Left" ng-model="ApplicationForm.FieldStudy" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.FieldStudy.$dirty || submitted) && FormRegisterApplication.FieldStudy.$error.required" class="txtValidation Align-Right validation-application-form">  رشته تحصیلی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> نام دانشگاه :</lable>
+                        <div class="clearfix"></div>
+                        <input name="University" type="text" class="input-control Align-Left" ng-model="ApplicationForm.University" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.University.$dirty || submitted) && FormRegisterApplication.University.$error.required" class="txtValidation Align-Right validation-application-form">  دانشگاه را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> سال فارغ التحصیلی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="GraduationYear" type="text" class="input-control Align-Left" ng-model="ApplicationForm.GraduationYear" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.GraduationYear.$dirty || submitted) && FormRegisterApplication.GraduationYear.$error.required" class="txtValidation Align-Right validation-application-form">  سال فارغ التحصیلی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> معدل مقطع تحصیلی :</lable>
+                        <div class="clearfix"></div>
+                        <input name="GPA" type="text" class="input-control Align-Left" ng-model="ApplicationForm.GPA" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.GPA.$dirty || submitted) && FormRegisterApplication.GPA.$error.required" class="txtValidation Align-Right validation-application-form">  معدل مقطع تحصیلی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> رشته تحصیلی دیپلم :</lable>
+                        <div class="clearfix"></div>
+                        <input name="DiplomFieldStudy" type="text" class="input-control Align-Left" ng-model="ApplicationForm.DiplomFieldStudy" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.DiplomFieldStudy.$dirty || submitted) && FormRegisterApplication.DiplomFieldStudy.$error.required" class="txtValidation Align-Right validation-application-form">  رشته تحصیلی دیپلم را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> محدوده سکونت :</lable>
+                        <div class="clearfix"></div>
+                        <input name="Residence" type="text" class="input-control Align-Left" ng-model="ApplicationForm.Residence" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.Residence.$dirty || submitted) && FormRegisterApplication.Residence.$error.required" class="txtValidation Align-Right validation-application-form">  محدوده سکونت را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> میزان سابقه کاری :</lable>
+                        <div class="clearfix"></div>
+                        <input name="TotalExperience" type="text" class="input-control Align-Left" ng-model="ApplicationForm.TotalExperience" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.TotalExperience.$dirty || submitted) && FormRegisterApplication.TotalExperience.$error.required" class="txtValidation Align-Right validation-application-form">  میزان سابقه کاری را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> آشنایی با نرم افزار های مرتبط :</lable>
+                        <div class="clearfix"></div>
+                        <input name="SoftwareExperience" type="text" class="input-control Align-Left" ng-model="ApplicationForm.SoftwareExperience" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.SoftwareExperience.$dirty || submitted) && FormRegisterApplication.SoftwareExperience.$error.required" class="txtValidation Align-Right validation-application-form">  آشنایی با نرم افزار های مرتبط را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> وضعیت اشتغال در حال حاضر :</lable>
+                        <div class="clearfix"></div>
+                        <input name="EmploymentStatus" type="text" class="input-control Align-Left" ng-model="ApplicationForm.EmploymentStatus" maxlength="50" descriptionpattern required />
+                        <span ng-if="(FormRegisterApplication.EmploymentStatus.$dirty || submitted) && FormRegisterApplication.EmploymentStatus.$error.required" class="txtValidation Align-Right validation-application-form">  وضعیت اشتغال در حال حاضر را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> میزان حقوق درخواستی ( تومان) :</lable>
+                        <div class="clearfix"></div>
+                        <input name="RequestedSalary" type="text" class="input-control Align-Left" ng-model="ApplicationForm.RequestedSalary" maxlength="50" numbers-only required />
+                        <span ng-if="(FormRegisterApplication.RequestedSalary.$dirty || submitted) && FormRegisterApplication.RequestedSalary.$error.required" class="txtValidation Align-Right validation-application-form">  میزان حقوق درخواستی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <lable> تلفن همراه :</lable>
+                        <div class="clearfix"></div>
+                        <input name="Mobile" type="text" class="input-control Align-Left" ng-model="ApplicationForm.Mobile" maxlength="11" numbers-only required ng-pattern="MobileFormat" />
+                        <span ng-if="(FormRegisterApplication.Mobile.$dirty || submitted) && FormRegisterApplication.Mobile.$error.required" class="txtValidation Align-Right validation-application-form">  تلفن همراه را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <!--<span ng-if="(FormRegisterApplication.Mobile.$error.pattern )" class="txtValidation Align-Right">  تلفن همراه را در فرمت صحیح وارد کنید!</span>
+                        <div class="clearfix"></div>-->
+                    </div>
+                    <div class="clearfix"></div>
+                    <div>
+                        <img id="ApplicationFormImgCaptcha" style="width:150px;float:left;margin-bottom: 5px;" /><i class="fa fa-refresh" style="float:left;margin:10px 0 0 10px;cursor:pointer;color:green" ng-click="GetCaptcha()"></i>
+                        <br />
+                        <lable>کد امنیتی :</lable>
+                        <input type="text" id="CaptchaApplication" class="input-control Align-Left" ng-model="ApplicationForm.CaptchaApplication" name="CaptchaApplication" required maxlength="5" confirm match-target="Captcha.CaptchaText" />
+                        <span ng-if="(FormRegisterApplication.CaptchaApplication.$dirty || submitted) && FormRegisterApplication.CaptchaApplication.$error.required" class="txtValidation Align-Right validation-application-form">  کد امنیتی را وارد کنید!</span>
+                        <div class="clearfix"></div>
+                        <span ng-if="FormRegisterApplication.CaptchaApplication.$error.match && ApplicationForm.CaptchaApplication.length==5 " class="txtValidation Align-Right validation-application-form"> عدم تطابق کد امنیتی !</span>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div>
+                        <input type="submit" value="ثبت نام" class="button-control" ng-click="AddApplicationForm(ApplicationForm)" /> 
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

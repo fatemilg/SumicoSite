@@ -1429,6 +1429,97 @@ html, body {
                     color: #ffb700;
                 }
 
+
+    /*ApplicationForm*/
+    .divApplicationForm {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+
+        .divApplicationForm span {
+            font-size: 12px;
+            color: #bebebe;
+        }
+
+        .divApplicationForm .ApplicationFormContainer {
+            text-align: center;
+            width: 100%;
+        }
+
+            .divApplicationForm .ApplicationFormContainer div {
+                margin-bottom: 7px;
+            }
+
+            .divApplicationForm .ApplicationFormContainer .ApplicationFormSection {
+                width: 300px;
+                text-align: left;
+                border: 1px solid #656464;
+                display: inline-block;
+                padding: 0 25px 25px 25px;
+                border-radius: 5px;
+            }
+
+        .divApplicationForm .input-control {
+            width: 250px;
+            font-size: 12px;
+            color: black;
+            height: 33px;
+            float: right;
+            margin-bottom: 5px;
+        }
+
+            .divApplicationForm .input-control option {
+                background-color: #323232 !important;
+                color: #fff;
+                font-size: 11px;
+            }
+
+        .divApplicationForm .Mobile {
+            width: 139px;
+        }
+
+        .divApplicationForm .button-control {
+            width: 250px;
+            color: #81b7cc;
+            font-size: 12px;
+            height: 33px;
+            float: right;
+        }
+
+
+        .divApplicationForm .CommonPart .input-control {
+            width: 159px;
+        }
+
+        .divApplicationForm .CommonPart .button-control {
+            width: 82px;
+            margin-right: 3px;
+            font-size: 12px;
+            height: 33px;
+        }
+
+        .divApplicationForm .CommonPart .MessageError {
+            direction: rtl;
+            float: right;
+            text-align: right;
+            font-size: 12px;
+            color: #ffb700;
+            line-height: normal;
+        }
+
+
+
+
+        .divApplicationForm .divApplicationForm lable {
+            float: right;
+            margin-bottom: 0px;
+            font-size: 11px;
+            text-align: right;
+            direction: rtl;
+            color: #4b4949;
+        }
+
     h1, h2, h3, h4, h5, h6, span {
         color: #fff;
     }
@@ -1832,12 +1923,11 @@ html, body {
     .CatalogHeader {
         color: #ffb500 !important;
         font-size: 18px !important;
-        margin-top: 15px;
         padding: 5px 5px 5px 55px;
         background-color: #282829;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        margin: 30px 0 10px 0;
+        margin: 5px 0 10px 0;
         display: inline-block;
         width: 200px;
         text-align: right;
@@ -3796,7 +3886,7 @@ html, body {
         margin-bottom: 10px;
         font-size: 11px;
         cursor: pointer;
-        margin-right:10px;
+        margin-right: 10px;
     }
 
     /* Right Side Article List in Article Category Pages - Desktop Size */
@@ -6910,6 +7000,97 @@ html, body {
                     color: #ffb700;
                 }
 
+    /*ApplicationForm*/
+    .divApplicationForm {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+
+        .divApplicationForm span {
+            font-size: 12px;
+            color: #bebebe;
+        }
+
+        .divApplicationForm .ApplicationFormContainer {
+            text-align: center;
+            width: 100%;
+        }
+
+            .divApplicationForm .ApplicationFormContainer div {
+                margin-bottom: 7px;
+            }
+
+            .divApplicationForm .ApplicationFormContainer .ApplicationFormSection {
+                width: 300px;
+                text-align: left;
+                border: 1px solid #656464;
+                display: inline-block;
+                padding: 0 25px 25px 25px;
+                border-radius: 5px;
+            }
+
+        .divApplicationForm .input-control {
+            width: 250px;
+            font-size: 12px;
+            color: black;
+            height: 33px;
+            float: right;
+            margin-bottom: 5px;
+        }
+
+            .divApplicationForm .input-control option {
+                background-color: #323232 !important;
+                color: #fff;
+                font-size: 11px;
+            }
+
+        .divApplicationForm .Mobile {
+            width: 139px;
+        }
+
+        .divApplicationForm .button-control {
+            width: 250px;
+            color: #81b7cc;
+            font-size: 12px;
+            height: 33px;
+            float: right;
+        }
+
+
+        .divApplicationForm .CommonPart .input-control {
+            width: 159px;
+        }
+
+        .divApplicationForm .CommonPart .button-control {
+            width: 82px;
+            margin-right: 3px;
+            font-size: 12px;
+            height: 33px;
+        }
+
+
+        .divApplicationForm .CommonPart .MessageError {
+            direction: rtl;
+            float: right;
+            text-align: right;
+            font-size: 12px;
+            color: #ffb700;
+            line-height: normal;
+        }
+
+
+
+
+        .divApplicationForm .divApplicationForm lable {
+            float: right;
+            margin-bottom: 0px;
+            font-size: 11px;
+            text-align: right;
+            direction: rtl;
+            color: #4b4949;
+        }
+
 
 
     .IndexDescritionPicInCompare {
@@ -7580,6 +7761,7 @@ html, body {
             direction: rtl;
             padding: 10px 10px 10px 10px;
         }
+
         .MobileContactMenu .divCenterOffice {
             direction: rtl;
             text-align: right;
@@ -7587,6 +7769,7 @@ html, body {
             font-size: 14px;
             padding: 7px;
         }
+
     .divCenterOffice .addressInformation {
         direction: rtl;
         text-align: right;
@@ -7595,6 +7778,7 @@ html, body {
         padding: 6px 6px 0px 6px;
         margin-bottom: 0px;
     }
+
     .MobileContactMenu .divFactory {
         direction: rtl;
         text-align: right;
@@ -7602,6 +7786,7 @@ html, body {
         font-size: 14px;
         padding: 0px 7px 0px 7px;
     }
+
     .divFactory .addressInformation {
         direction: rtl;
         text-align: right;
@@ -7610,6 +7795,7 @@ html, body {
         padding: 6px 6px 0px 6px;
         margin-bottom: 0px;
     }
+
     .MobileContactMenu .divSocialMedia {
         width: 100%;
         text-align: left;
@@ -8484,7 +8670,7 @@ html, body {
     }
 
     .txtValidation {
-        color: #ff8b8b !important;
+        color: #f30000 !important;
         margin: 7px 7px 0 0;
         font-size: 12px;
     }
@@ -9908,7 +10094,7 @@ html, body {
     .divSelectProperty .ActiveProperty {
         background-color: lightgray;
         border-radius: 10px;
-        margin-bottom:8px;
+        margin-bottom: 8px;
     }
 
     .divTitleProperty .EnTitle {
@@ -10171,16 +10357,15 @@ html, body {
         z-index: 10000;
         transition: 0.5s;
         overflow: hidden;
-
     }
 
         .LeftSideArticleList .LeftSideArticleHeader {
-            display:none;
+            display: none;
         }
 
-    .LeftSideArticleList span {
-        color: #fff;
-    }
+        .LeftSideArticleList span {
+            color: #fff;
+        }
 
         .LeftSideArticleList a {
             color: #fff !important;
@@ -10245,7 +10430,7 @@ html, body {
         direction: rtl;
         margin-bottom: 10px;
         font-size: 11px;
-        margin-right:10px;
+        margin-right: 10px;
     }
 
     /* Right Side Article List in Article Category Pages - Mobile Size */
@@ -10664,5 +10849,11 @@ html, body {
         display: block;
         font-size: 14px;
         margin-bottom: 10px;
+    }
+
+    .validation-application-form
+    {
+        float:right;
+        padding-bottom:3px;
     }
 }
